@@ -24,7 +24,7 @@ body.abio{margin:0;min-width:320px;background:var(--mo-bg,var(--a-paper));color:
 .abio-skip:focus{top:10px}
 .abio-eyebrow{font:700 10px/1.5 "Liberation Mono",monospace;letter-spacing:.12em;color:var(--mo-accent,var(--a-accent));text-transform:uppercase}
 .abio-crumb{padding-top:23px;font:11px "Liberation Mono",monospace;color:var(--mo-muted,var(--a-mid))}
-.abio-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,.8fr);gap:clamp(25px,5vw,80px);align-items:center;padding-top:63px;padding-bottom:75px}
+.abio-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.8fr);gap:clamp(25px,5vw,80px);align-items:center;padding-top:63px;padding-bottom:75px}
 .abio-hero>*,.abio-card-grid>*,.abio-experiment>*,.abio-panel>*,.abio-results>*{min-width:0;max-width:100%}
 .abio-hero h1{font-size:clamp(49px,5.8vw,85px);font-weight:700;line-height:1.04;letter-spacing:-.065em;margin:18px 0 25px}
 .abio-hero h1 em{font:400 1em "Liberation Serif",Georgia,serif;color:var(--a-accent)}
