@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f3f8f6"><title>RNA & Information — Learning Lab 02</title>
+<meta name="description" content="Was passiert, wenn bei der Kopie einer RNA-Sequenz Fehler entstehen? Untersuche Basenpaarung, zufällige Modellfehler und den Einfluss der Sequenzlänge.">
+<link rel="stylesheet" href="modern-objectivity.css"><link rel="stylesheet" href="abiogenesis.css"><link rel="stylesheet" href="lab02-modules.css">
+<script defer src="lab02-modules.js"></script></head>
+<body class="abio" data-sublab="04"><a class="abio-skip" href="#main">Zum Inhalt springen</a>
+<header class="abio-header"><div class="abio-wrap abio-header-inner">
+<a href="index.html" class="abio-brand"><span class="abio-brand-mark" aria-hidden="true">◌</span><span><strong>ABIOGENESE</strong><small>LEARNING LAB / 02</small></span></a>
+<nav class="abio-nav" aria-label="Labor-Navigation">
+<a href="index.html">Übersicht</a><a href="01_praebiotische_chemie.html">01 Konzentration</a>
+<a href="02_bausteine.html">02 Moleküle & Reaktionen</a><a href="03_protocellen.html">03 Protocellen</a><a href="04_rna_information.html" aria-current="page">04 RNA & Vererbung</a><a href="05_hypothesen.html">05 Ursprungshypothesen</a><a href="06_evidenzlabor.html">06 Evidenzlabor</a>
+<a class="abio-home" href="https://philippklinz.github.io/learning-labs/">Alle Labore ↗</a></nav></div></header>
+<main id="main" class="abio-wrap"><div class="abio-crumb"><a href="index.html">LAB 02</a> / UNTERLABOR 04 / BAUSTEINE</div>
+<section class="lab-intro"><div class="abio-eyebrow">UNTERLABOR 04 / RNA und Kopierfehler</div><h1>Kann Information<br>kopiert werden?</h1>
+<p>Was passiert, wenn bei der Kopie einer RNA-Sequenz Fehler entstehen? Untersuche Basenpaarung, zufällige Modellfehler und den Einfluss der Sequenzlänge.</p><div class="lab-index"><span>A–U UND G–C</span><span>100 MODELLKOPIEN</span><span>KEIN ECHTES RNA-LABOR</span></div></section>
+
+
+<section class="lab-section" aria-labelledby="rna-title"><div class="lab-section-head"><div><div class="abio-eyebrow">01 / SEQUENZEXPERIMENT</div><h2 id="rna-title">Information in vier Buchstaben.</h2></div><p>RNA speichert Information in der Reihenfolge der Basen A, U, G und C. Das Gegenstück wird nach Paarungsregeln gebildet – Fehler können die Sequenz verändern.</p></div>
+<div class="lab-grid"><div class="lab-pane"><div class="lab-pane-inner">
+<div class="lab-field"><label for="rna-template">RNA-Vorlage (A, U, G, C)</label>
+<input id="rna-template" type="text" value="AUGCCGAU" maxlength="28" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="rna-input-help">
+<small id="rna-input-help">1–28 Zeichen; wir zeigen eine positionweise gegenübergestellte Gegenstrang-Sequenz, nicht eine chemische Polymerisationsreaktion.</small></div>
+<div class="lab-field"><label for="rna-error">Modell-Fehlerwahrscheinlichkeit pro Position <strong id="rna-error-label">5 %</strong></label>
+<input id="rna-error" type="range" min="0" max="30" step="1" value="5"></div>
+<div class="lab-buttons"><button type="button" id="rna-copy" class="lab-button primary">100 Kopierversuche simulieren →</button><button type="button" id="rna-reset" class="lab-button">Ausgangszustand</button></div>
+<div class="lab-info"><strong>Was wird modelliert?</strong><p>Jede Position kann mit einer frei gewählten Fehlerwahrscheinlichkeit unabhängig falsch kopiert werden. Das ist ein Modell für Sequenzfehler, <em>keine</em> Simulation nichtenzymatischer RNA-Chemie.</p></div>
+</div></div>
+<div class="lab-pane"><div class="lab-pane-inner">
+<div class="abio-eyebrow">BASENPAARUNG / RESULTAT</div><h3>Die Vorlage und ihr Gegenstück</h3>
+<div class="lab-sequence-label">VORLAGE / ZEICHEN VON LINKS NACH RECHTS</div><div id="rna-original" class="lab-sequence" aria-label="RNA-Vorlage"></div>
+<div class="lab-sequence-label">ERWARTETER KOMPLEMENTÄRSTRANG</div><div id="rna-expected" class="lab-sequence" aria-label="Komplementäre Sequenz"></div>
+<div class="lab-sequence-label">EIN ZUFÄLLIGER MODELL-KOPIERVERSUCH</div><div id="rna-copied" class="lab-sequence" aria-label="Kopie mit möglichen Fehlern"></div>
+<div id="rna-feedback" class="lab-feedback" role="status" aria-live="polite">Wähle eine Sequenz und starte die Kopierversuche.</div>
+</div></div></div>
+<div class="lab-metrics"><div class="lab-metric"><small>VORLAGENLÄNGE</small><strong id="rna-length">8</strong></div>
+<div class="lab-metric"><small>FEHLERFREI (THEORIE)</small><strong id="rna-theory">66,34 %</strong></div>
+<div class="lab-metric"><small>FEHLERFREI (100 VERSUCHE)</small><strong id="rna-observed">–</strong></div></div></section>
+<section class="lab-section"><div class="lab-section-head"><div><div class="abio-eyebrow">02 / MODELLGRENZEN</div><h2>Ein kopierter Text ist noch keine Replikation.</h2></div></div>
+<div class="lab-cards"><article class="lab-note-card"><small>CHEMISCHE VORAUSSETZUNG</small><h3>Aktivierte Bausteine</h3><p>Auch die Abfolge der komplementären Basen erklärt noch nicht, wie Bindungen ohne Enzyme entstehen. Die nichtenzymatische Verlängerung von RNA ist eine eigene Forschungsaufgabe.</p></article>
+<article class="lab-note-card"><small>SEQUENZINFORMATION</small><h3>Fehler und Länge</h3><p>Bei einer konstanten Fehlerquote pro Position sinkt die Chance einer vollständig korrekten Kopie mit der Sequenzlänge. Das Lehrmodell lässt die Fehler unabhängig auftreten.</p></article>
+<article class="lab-note-card"><small>OFFENE FRAGEN</small><h3>Zyklen und Funktion</h3><p>Eine nachhaltige Entwicklung müsste Kopie, Trennung, erneute Kopie, Ressourcen und gegebenenfalls funktionelle RNA unter geeigneten Bedingungen verbinden.</p></article></div>
+<div class="lab-info" style="margin-top:18px"><strong>Die RNA-Welt ist eine Hypothese.</strong><p>RNA kann heute Informationen tragen und als Ribozym katalytisch wirken. Dass das früheste Leben ausschließlich RNA-basiert war oder wann bestimmte Reaktionen entstanden, ist nicht gesichert. Moderne Basenpaarung ist keine vollständige Ursprungsgeschichte.</p></div></section><section class="lab-source" aria-label="Wissenschaftliche Quellen"><strong>Quellen und wissenschaftliche Grenzen:</strong> <a href="https://doi.org/10.1093/nar/gkae982" target="_blank" rel="noopener noreferrer">Nucleic Acids Research (2024): Nichtenzymatische RNA-Kopie und Nukleotid-Bias</a> · <a href="https://elifesciences.org/articles/17756" target="_blank" rel="noopener noreferrer">eLife (2016): aktivierte Oligonukleotide und Vorlagenkopie</a>. Der hier verwendete unabhängige Fehlermechanismus ist eine frei gewählte didaktische Abstraktion, keine gemessene RNA-Kopierchemie.</section>
+<nav class="lab-plain-nav" aria-label="Weiterführende Labore"><a href="index.html">← Alle sechs Unterlabore</a><a href="05_hypothesen.html">Nächstes Unterlabor ↗</a><a href="https://philippklinz.github.io/lab-molecular-biology/">LAB 03 · Molekularbiologie ↗</a></nav>
+</main><footer class="abio-footer"><div class="abio-wrap abio-footer-inner"><span>LEARNING LAB 02 · ABIOGENESE<br>STATIC BY DESIGN · NO ACCOUNTS · NO TRACKING</span><span><a href="https://philippklinz.github.io/modern-objectivity-style/">Modern Objectivity ↗</a> · <a href="https://github.com/philippklinz/lab-abiogenesis">GitHub ↗</a> · <a href="LICENSE">GPL v2.0</a></span></div></footer></body></html>
