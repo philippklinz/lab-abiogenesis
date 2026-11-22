@@ -1,49 +1,108 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Wie könnte Leben aus unbelebter Materie entstanden sein?">
-<title>Abiogenese · Learning Lab 02</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f3f8f6">
+<meta name="description" content="LAB 02 – Abiogenese: Vom Molekül zum möglichen Ursprung des Lebens. Interaktive Experimente zu präbiotischer Chemie, Konzentration, Protocellen und Information.">
+<title>Abiogenese — Learning Lab 02</title>
 <link rel="stylesheet" href="modern-objectivity.css">
-<style>
-:root{color-scheme:light;--paper:var(--mo-bg);--ink:var(--mo-text);--graphite:var(--mo-rail);--signal:var(--mo-accent);--edge:var(--mo-border);--muted:var(--mo-muted)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 "Liberation Sans",Arial,sans-serif}
-a{color:inherit;text-underline-offset:3px}:focus-visible{outline:3px solid var(--signal);outline-offset:4px}
-header{background:var(--graphite);color:#e9f0ec;border-bottom:3px solid var(--signal)}.top{max-width:1120px;margin:auto;padding:19px 28px;display:flex;justify-content:space-between;gap:20px;align-items:center;font:12px "Liberation Mono",monospace;letter-spacing:.04em}.top a{color:#b5ddd6;text-decoration:none}.top a:hover{text-decoration:underline}
-main{max-width:1120px;margin:auto;padding:74px 28px 110px}.eyebrow{font:11px "Liberation Mono",monospace;letter-spacing:.15em;text-transform:uppercase;color:#007973}.hero{padding-bottom:64px;border-bottom:1px solid var(--edge)}h1{font-size:clamp(42px,7vw,86px);font-weight:400;letter-spacing:-.065em;line-height:1.06;max-width:860px;margin:22px 0}h1 strong{font-weight:700}.lead{max-width:800px;font:22px/1.55 "Liberation Serif",Georgia,serif;color:var(--muted)}.note{margin-top:28px;border-left:3px solid var(--signal);padding:11px 17px;background:#fff;font-size:13px;max-width:760px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding-top:52px}.panel{min-width:0}h2{font-size:28px;font-weight:400;line-height:1.2;letter-spacing:-.04em;margin:12px 0 23px}ul{padding:0;list-style:none;margin:0}li{display:flex;gap:16px;padding:14px 0;border-top:1px solid var(--edge);font-size:15px}.index{font:11px "Liberation Mono",monospace;color:#007e79;padding-top:5px;min-width:25px}
-footer{max-width:1120px;margin:auto;border-top:1px solid var(--edge);padding:24px 28px 40px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font:12px "Liberation Mono",monospace;color:var(--muted)}footer a{color:#006f6b}
-@media(max-width:720px){main{padding:52px 20px 70px}.grid{grid-template-columns:1fr;gap:42px}.top,footer{padding-left:20px;padding-right:20px}.lead{font-size:19px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-
-/* Modern Objectivity reference v0.1: stage-specific adjustments. */
-:focus-visible{outline:3px solid var(--mo-focus)!important}
-.note{border-radius:var(--mo-radius-sm);box-shadow:var(--mo-shadow)}
-.eyebrow{color:var(--mo-accent)}
-footer a{color:var(--mo-accent)}
-</style>
+<link rel="stylesheet" href="abiogenesis.css">
 </head>
-<body>
-<header><div class="top"><span>LEARNING LAB / 02</span><a href="https://github.com/philippklinz/lab-abiogenesis">SOURCE / GITHUB</a></div></header>
-<main>
-<section class="hero"><div class="eyebrow">INTERAKTIVES WISSENSLABOR / KONZEPTPHASE</div>
-<h1><strong>Abiogenese</strong></h1>
-<p class="lead">Wie könnte Leben aus unbelebter Materie entstanden sein?</p>
-<p>Präbiotische Chemie, Membranen, Stoffwechsel, Selbstorganisation, erste Informationssysteme und Ursprungshypothesen.</p>
-<div class="note"><strong>Stand:</strong> Dieses Labor ist angelegt, aber die interaktiven Schaubilder sind noch nicht implementiert. Die untenstehenden Inhalte sind Themen und geplante Experimente, keine bereits funktionierenden Features.</div>
-</section>
-<div class="grid">
-<section class="panel"><div class="eyebrow">RESEARCH QUESTIONS</div><h2>Fragen, die wir untersuchen wollen</h2><ul><li><span class="index">01</span><span>Welche einfachen chemischen Bausteine gab es?</span></li>
-<li><span class="index">02</span><span>Wie können sich Lipidmembranen und Protocellen bilden?</span></li>
-<li><span class="index">03</span><span>Welche Rolle könnte RNA gespielt haben?</span></li>
-<li><span class="index">04</span><span>Welche Hypothesen lassen sich experimentell prüfen?</span></li></ul></section>
-<section class="panel"><div class="eyebrow">FUTURE EXHIBITS</div><h2>Geplante Experimente</h2><ul><li><span class="index">01</span><span>Molekül- und Reaktionsmodelle für präbiotische Chemie</span></li>
-<li><span class="index">02</span><span>Protocell- und Membranexperiment</span></li>
-<li><span class="index">03</span><span>Vergleich von RNA-Welt, Stoffwechsel-zuerst und anderen Modellen</span></li></ul></section>
+<body class="abio">
+<a href="#main" class="abio-skip">Zum Inhalt springen</a>
+<header class="abio-header"><div class="abio-wrap abio-header-inner">
+<a class="abio-brand" href="index.html"><span class="abio-brand-mark" aria-hidden="true">◌</span><span><strong>ABIOGENESE</strong><small>LEARNING LAB / 02</small></span></a>
+<nav class="abio-nav" aria-label="Labor-Navigation"><a href="index.html" aria-current="page">Übersicht</a><a href="01_praebiotische_chemie.html">Präbiotische Chemie</a><a href="https://philippklinz.github.io/lab-early-earth/">LAB 01 ↗</a><a class="abio-home" href="https://philippklinz.github.io/learning-labs/">Alle Labore ↗</a></nav>
+</div></header>
+<main id="main">
+<div class="abio-wrap">
+<section class="abio-hero" aria-labelledby="lab02-title">
+<div>
+<div class="abio-eyebrow">LAB 02 / URSPRUNG DES LEBENS</div>
+<h1 id="lab02-title">Wo endet Chemie?<br><em>Wo beginnt Leben?</em></h1>
+<p class="abio-lead">Aus einfachen Stoffen können komplexe Strukturen entstehen. Aber unter welchen Bedingungen könnte daraus ein System geworden sein, das sich erhält, Information weitergibt und sich verändert?</p>
+<p class="abio-hero-note">Niemand kennt den tatsächlichen historischen Weg zum ersten Leben. Dieses Labor untersucht einzelne chemische Mechanismen und die Möglichkeiten – und Grenzen – der heutigen Forschung.</p>
+<div class="abio-actions"><a class="abio-link-btn" href="01_praebiotische_chemie.html">Erstes Experiment starten →</a><a class="abio-link-btn secondary" href="#unterlabore">Unterlabore entdecken</a></div>
 </div>
-<section class="note" style="margin-top:45px"><strong>Wissenschaftliche Einordnung:</strong> Abiogenese ist kein abschließend geklärter Ablauf. Modelle, Hypothesen, Laborexperimente und gesicherte Beobachtungen sichtbar unterscheiden.</section>
+<div class="abio-hero-graphic" role="img" aria-label="Symbolische Illustration eines membranartigen Vesikels mit Molekülbausteinen; keine Rekonstruktion einer echten frühen Zelle">
+<div class="abio-graphic-meta"><span>FIG. 002 / SELF-ORGANIZATION</span><span>SCHEMATIC MODEL</span></div>
+<svg viewBox="0 0 510 340" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><radialGradient id="vesicle-fill"><stop offset="0" stop-color="#2d666e" stop-opacity=".24"/><stop offset=".9" stop-color="#347f83" stop-opacity=".47"/><stop offset="1" stop-color="#54a9a3" stop-opacity=".1"/></radialGradient><pattern id="abio-grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" stroke="#a9d7c4" stroke-opacity=".09" fill="none"/></pattern></defs>
+<rect width="510" height="340" fill="url(#abio-grid)"/>
+<circle cx="255" cy="171" r="133" fill="url(#vesicle-fill)" stroke="#72cbbb" stroke-width="12" opacity=".92"/>
+<circle cx="255" cy="171" r="116" stroke="#abd7c8" stroke-width="2" stroke-dasharray="4 11" opacity=".85"/>
+<circle cx="255" cy="171" r="149" stroke="#5ca5a1" stroke-width="2" stroke-dasharray="3 12" opacity=".55"/>
+<g stroke="#9cd3c1" stroke-width="2"><path d="M215 125L260 156 304 129"/><path d="M260 156L277 213 238 248"/><path d="M277 213L326 225"/><path d="M260 156L199 178"/><path d="M199 178L192 225"/></g>
+<g stroke="#e2e8c8" stroke-width="2">
+<circle cx="215" cy="125" r="13" fill="#8cc7b6"/><circle cx="260" cy="156" r="14" fill="#e2b18d"/><circle cx="304" cy="129" r="10" fill="#8fc3c7"/>
+<circle cx="277" cy="213" r="14" fill="#8fc3c7"/><circle cx="238" cy="248" r="11" fill="#9fbc92"/><circle cx="326" cy="225" r="10" fill="#d49d87"/>
+<circle cx="199" cy="178" r="12" fill="#e0b88c"/><circle cx="192" cy="225" r="8" fill="#93c6b4"/>
+</g>
+<g fill="#9cc7c1"><circle cx="100" cy="77" r="5"/><circle cx="397" cy="66" r="8"/><circle cx="417" cy="244" r="5"/><circle cx="104" cy="264" r="8"/><circle cx="366" cy="291" r="5"/></g>
+<path d="M144 65l-44-27h-51M377 234l57 34h31" stroke="#a7d5c5" stroke-width="1.3" fill="none"/>
+<text x="49" y="30" font-size="10" font-family="monospace" fill="#a4ccc3">BOUNDARY</text>
+<text x="471" y="286" text-anchor="end" font-size="10" font-family="monospace" fill="#a4ccc3">INSIDE / OUTSIDE</text>
+<path d="M26 18h14M26 18v14M470 18h14v14M26 305v14h14M470 319h14v-14" stroke="#8bb8ad" opacity=".65" fill="none"/>
+</svg>
+<div class="abio-graphic-meta"><span>MOLECULES · COMPARTMENT</span><span>NOT A LIVING CELL</span></div>
+</div>
+</section>
+</div>
+<section class="abio-section alt" id="unterlabore">
+<div class="abio-wrap">
+<div class="abio-section-title"><div><div class="abio-eyebrow">01 / UNTERLABORE</div><h2>Sechs Forschungsfragen.</h2></div><p>Die Module sind keine gesicherte Abfolge der Lebensentstehung. Wir können sie unabhängig voneinander untersuchen und später miteinander verbinden.</p></div>
+<div class="abio-card-grid">
+<article class="abio-module">
+<div class="abio-module-art"><svg viewBox="0 0 260 120" fill="none" aria-hidden="true"><path d="M47 26V93h166V26" stroke="#9ccac1" stroke-width="2"/><path d="M49 54H211V92H49Z" fill="#2a7f8a" opacity=".85"/><path d="M49 54H211" stroke="#9de1d4" stroke-width="2"/><g fill="#cae2b8"><circle cx="75" cy="73" r="4"/><circle cx="104" cy="82" r="5"/><circle cx="130" cy="65" r="4"/><circle cx="151" cy="81" r="4"/><circle cx="184" cy="71" r="5"/><circle cx="194" cy="87" r="3"/></g><path d="M225 35v45m-6-9 6 9 6-9" stroke="#d3b695" stroke-width="2"/></svg></div>
+<div class="abio-module-body"><span class="abio-eyebrow">UNTERLABOR 01 / CHEMIE</span><h3>Präbiotische Chemie</h3><p>Warum ist Konzentration wichtig? Verändere die Menge an gelösten Teilchen und das Wasservolumen eines idealisierten Reaktionsraums.</p></div>
+<div class="abio-module-foot"><a href="01_praebiotische_chemie.html">Experiment öffnen ↗</a><span class="abio-tag live">INTERAKTIV</span></div>
+</article>
+<article class="abio-module">
+<div class="abio-module-art"><svg viewBox="0 0 260 120" fill="none" aria-hidden="true"><g stroke="#9cc9b9" stroke-width="3"><path d="M47 61L92 35 136 59 179 35 217 63"/><path d="M92 35v-23M136 59v26M179 35v-25"/></g><g stroke="#d7d8aa" stroke-width="2"><circle cx="47" cy="61" r="11" fill="#5a9e96"/><circle cx="92" cy="35" r="12" fill="#e1b78d"/><circle cx="136" cy="59" r="13" fill="#76b9af"/><circle cx="179" cy="35" r="11" fill="#a0c6b7"/><circle cx="217" cy="63" r="12" fill="#d99f8d"/></g></svg></div>
+<div class="abio-module-body"><span class="abio-eyebrow">UNTERLABOR 02 / BAUSTEINE</span><h3>Moleküle &amp; Reaktionen</h3><p>Untersuche Bindungen, Bausteine und chemische Reaktionsbedingungen. Nicht jede Reaktion führt zu einem biologischen Molekül.</p></div>
+<div class="abio-module-foot"><span class="abio-coming">Experiment in Planung</span><span class="abio-tag">GEPLANT</span></div>
+</article>
+<article class="abio-module">
+<div class="abio-module-art"><svg viewBox="0 0 260 120" fill="none" aria-hidden="true"><circle cx="130" cy="60" r="42" stroke="#9ee1c9" stroke-width="10" fill="#20515b"/><circle cx="130" cy="60" r="31" stroke="#87b2a2" stroke-width="2" stroke-dasharray="4 6"/><g fill="#d8b692"><circle cx="118" cy="54" r="6"/><circle cx="145" cy="75" r="5"/><circle cx="134" cy="46" r="4"/></g><path d="M41 95h43M178 25h39" stroke="#8cb9ae" stroke-width="1.5"/></svg></div>
+<div class="abio-module-body"><span class="abio-eyebrow">UNTERLABOR 03 / MEMBRANEN</span><h3>Protocellen</h3><p>Wie bilden amphiphile Moleküle Aggregate und Vesikel? Was bedeutet eine Grenze zwischen Innen- und Außenraum?</p></div>
+<div class="abio-module-foot"><span class="abio-coming">Experiment in Planung</span><span class="abio-tag">GEPLANT</span></div>
+</article>
+<article class="abio-module">
+<div class="abio-module-art"><svg viewBox="0 0 260 120" fill="none" aria-hidden="true"><path d="M52 27Q130 89 208 27M52 92Q130 30 208 92" stroke="#8de2cb" stroke-width="4"/><path d="M64 36l12 48M95 47l14 25M135 61l14-2M166 49l17 30M193 33l15 50" stroke="#d7bd95" stroke-width="4"/><g fill="#6ba99d"><circle cx="80" cy="47" r="6"/><circle cx="134" cy="60" r="6"/><circle cx="182" cy="72" r="6"/></g></svg></div>
+<div class="abio-module-body"><span class="abio-eyebrow">UNTERLABOR 04 / INFORMATION</span><h3>RNA &amp; Vererbung</h3><p>Wie könnte sich Information kopieren? Experimentiere später mit Fehlerraten, Stabilität und einfachen Modellpopulationen.</p></div>
+<div class="abio-module-foot"><span class="abio-coming">Experiment in Planung</span><span class="abio-tag">GEPLANT</span></div>
+</article>
+<article class="abio-module">
+<div class="abio-module-art"><svg viewBox="0 0 260 120" fill="none" aria-hidden="true"><path d="M28 60h55l32-34 31 64 26-31h60" stroke="#85d0bc" stroke-width="3"/><g stroke="#c6dfd1" stroke-width="2"><circle cx="28" cy="60" r="10" fill="#326c71"/><circle cx="115" cy="26" r="10" fill="#b78a6f"/><circle cx="146" cy="90" r="10" fill="#8eac9c"/><circle cx="232" cy="60" r="10" fill="#326c71"/></g><path d="M47 96h41M172 25h40" stroke="#80b8ae" stroke-dasharray="4 4"/></svg></div>
+<div class="abio-module-body"><span class="abio-eyebrow">UNTERLABOR 05 / MODELLE</span><h3>Ursprungshypothesen</h3><p>Vergleiche RNA-zentrierte, metabolische und kompartimentbezogene Modelle – mit Befunden, Voraussetzungen und offenen Problemen.</p></div>
+<div class="abio-module-foot"><span class="abio-coming">Vergleich in Planung</span><span class="abio-tag">GEPLANT</span></div>
+</article>
+<article class="abio-module">
+<div class="abio-module-art"><svg viewBox="0 0 260 120" fill="none" aria-hidden="true"><rect x="49" y="24" width="162" height="73" rx="4" stroke="#86bdb3" stroke-width="2"/><path d="M63 41h94M63 55h63M63 69h107M63 83h80" stroke="#b0dad0" stroke-width="3"/><circle cx="190" cy="75" r="15" fill="#1c5b63" stroke="#9edbc6" stroke-width="2"/><path d="M182 75l6 6 12-15" stroke="#d1e4b4" stroke-width="3"/></svg></div>
+<div class="abio-module-body"><span class="abio-eyebrow">UNTERLABOR 06 / EVIDENZ</span><h3>Was wissen wir wirklich?</h3><p>Trenne im Evidenzlabor Beobachtungen, konkrete Laborexperimente, Interpretationen und ungelöste Fragen.</p></div>
+<div class="abio-module-foot"><span class="abio-coming">Evidenzlabor in Planung</span><span class="abio-tag">GEPLANT</span></div>
+</article>
+</div>
+</div>
+</section>
+<section class="abio-lower"><div class="abio-wrap">
+<div class="abio-section-title"><div><div class="abio-eyebrow">02 / WISSENSCHAFTLICHER ANSATZ</div><h2>Was ist gesichert – und was nicht?</h2></div></div>
+<div class="abio-columns">
+<div class="abio-info"><span class="abio-eyebrow">01 / EXPERIMENT</span><strong>Ein Mechanismus ist untersuchbar.</strong><p>Ein Molekül kann sich unter bestimmten Bedingungen bilden, eine Membran kann sich selbst organisieren. Das ist experimentell prüfbar.</p></div>
+<div class="abio-info"><span class="abio-eyebrow">02 / MODELL</span><strong>Mehrere Wege sind denkbar.</strong><p>RNA-zentrierte Systeme, frühe Stoffwechselnetzwerke und verschiedene Umgebungen werden untersucht. Sie sind nicht einfach austauschbare Antworten.</p></div>
+<div class="abio-info"><span class="abio-eyebrow">03 / OFFENE FRAGE</span><strong>Ein möglicher Weg ist kein Beweis.</strong><p>Niemand hat den tatsächlichen Übergang von unbelebter Chemie zum ersten lebenden System rekonstruiert.</p></div>
+</div>
+<div class="abio-references"><strong>Referenzen:</strong> <a href="https://astrobiology.nasa.gov/education/alp/how-did-life-first-emerge-on-earth/">NASA · Ursprung des Lebens</a> · <a href="https://astrobiology.nasa.gov/education/alp/first-cells-arise/">NASA · Erste Zellen</a>. Die gezeigten Illustrationen sind eigenständige Schemata, keine wissenschaftlichen Rekonstruktionen.</div>
+</div></section>
+<section class="abio-wrap abio-lower" style="padding-top:0">
+<div class="abio-section-title"><div><div class="abio-eyebrow">03 / WISSENSREISE</div><h2>Der Weg durch die Labore.</h2></div><p>Diese Verbindung ist eine Lernempfehlung, kein technischer Zwang und keine gesicherte historische Reihenfolge.</p></div>
+<div class="abio-columns">
+<div class="abio-info"><span class="abio-eyebrow">LAB 01 / VORHER</span><strong>Die frühe Erde</strong><p>Welche geologischen und atmosphärischen Umgebungen könnten präbiotische Chemie ermöglicht haben?</p><a href="https://philippklinz.github.io/lab-early-earth/">LAB 01 öffnen ↗</a></div>
+<div class="abio-info"><span class="abio-eyebrow">LAB 02 / HIER</span><strong>Abiogenese</strong><p>Wie könnten Bausteine, chemische Netzwerke, Kompartimente und Information zusammenspielen?</p></div>
+<div class="abio-info"><span class="abio-eyebrow">LAB 03 / WEITER</span><strong>Molekularbiologie</strong><p>Wie funktionieren DNA, RNA und die Weitergabe genetischer Information in heutigen lebenden Systemen?</p><a href="https://philippklinz.github.io/lab-molecular-biology/">LAB 03 öffnen ↗</a></div>
+</div>
+</section>
 </main>
-<footer><span>STANDALONE · STATIC HTML · <a href="https://philippklinz.github.io/modern-objectivity-style/">MODERN OBJECTIVITY ↗</a></span><span><a href="README.md">README</a> · <a href="AGENTS.md">AGENTS</a> · <a href="LICENSE">GPL v2.0</a></span></footer>
+<footer class="abio-footer"><div class="abio-wrap abio-footer-inner"><span>LEARNING LAB 02 · ABIOGENESE<br>STATIC BY DESIGN · OPEN ACCESS · NO ACCOUNTS · NO TRACKING</span><span><a href="https://philippklinz.github.io/modern-objectivity-style/">Modern Objectivity ↗</a> · <a href="https://github.com/philippklinz/lab-abiogenesis">GitHub ↗</a> · <a href="LICENSE">GPL v2.0</a></span></div></footer>
 </body>
 </html>
