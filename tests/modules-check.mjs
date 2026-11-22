@@ -45,14 +45,14 @@ await check('03_protocellen.html',async page=>{
   await page.locator('[data-shape="micelle"]').click();
   await assert(page,()=>document.querySelector('#membrane-title-text').textContent==='Mizelle','Micelle diagram');
   await page.locator('[data-shape="vesicle"]').click();
-  await page.locator('#membrane-permeability').fill('0');
+  await page.locator('#membrane-permeability').evaluate(el=>{el.value='0';el.dispatchEvent(new Event('input',{bubbles:true}))});
   await assert(page,()=>document.querySelector('#membrane-inside').textContent==='0,0 %','No transport');
-  await page.locator('#membrane-permeability').fill('100');
+  await page.locator('#membrane-permeability').evaluate(el=>{el.value='100';el.dispatchEvent(new Event('input',{bubbles:true}))});
   await assert(page,()=>document.querySelector('#membrane-inside').textContent==='100,0 %','Complete transport');
 });
 await check('04_rna_information.html',async page=>{
   await page.locator('#rna-template').fill('AUGC');
-  await page.locator('#rna-error').fill('0');
+  await page.locator('#rna-error').evaluate(el=>{el.value='0';el.dispatchEvent(new Event('input',{bubbles:true}))});
   await page.locator('#rna-copy').click();
   await assert(page,()=>document.querySelector('#rna-observed').textContent==='100 / 100','Error-free copies at p=0');
   await assert(page,()=>[...document.querySelectorAll('#rna-expected .lab-base')].map(x=>x.textContent).join('')==='UACG','RNA base pairing');
