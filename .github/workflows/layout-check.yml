@@ -1,0 +1,36 @@
+name: Responsive layout checks
+
+on:
+  push:
+    paths:
+      - '*.html'
+      - '*.css'
+      - 'tests/**'
+      - '.github/workflows/layout-check.yml'
+  pull_request:
+    paths:
+      - '*.html'
+      - '*.css'
+      - 'tests/**'
+      - '.github/workflows/layout-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  layout:
+    name: Headless Chromium / mobile to desktop
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install test-only browser tools
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Test all lab pages at 12 viewport widths
+        run: node tests/layout-check.mjs
