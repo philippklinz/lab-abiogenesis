@@ -88,3 +88,11 @@ Use the **locally vendored** `modern-objectivity.css` (the v0.1 draft [practical
 - Keep the six-module roadmap in docs/LAB-02-ROADMAP.md aligned with actual features.
 - Scientific distinction: demonstrable chemical mechanisms, candidate early-Earth environments, competing hypotheses, and the unknown historical path cannot be conflated.
 - Do not claim visual browser QA, accessibility compliance, or real chemistry validation unless explicitly tested.
+
+## Mandatory responsive layout regression checks
+
+- **Never use `padding: <vertical> 0` on elements that also carry `.abio-wrap`.** This resets the shared horizontal gutters, which already caused a recurring layout regression. Use explicit `padding-top` / `padding-bottom` on spacing classes instead.
+- Shared containers must keep `min-width:0` and `max-width:100%`-safe grid children. Do not solve page-wide horizontal overflow with `overflow-x:hidden`; fix the offending element.
+- Automated test: `tests/layout-check.mjs`, run via `.github/workflows/layout-check.yml` on HTML/CSS changes. It checks **all standalone lab HTML pages** in Chromium at 320–1600 px, validates no document-level horizontal scrolling, and asserts that `.abio-wrap.abio-lower` retains at least 18 px left and right gutters.
+- If installing test dependencies locally, use `npm install --no-save playwright@1.56.1`, `npx playwright install chromium`, then `node tests/layout-check.mjs`. No build dependencies belong to the site's actual runtime.
+- Add newly created HTML lab pages to this automatically discovered check by following the convention `NN_name.html`.
