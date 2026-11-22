@@ -56,7 +56,7 @@ body.abio{margin:0;min-width:320px;background:var(--mo-bg,var(--a-paper));color:
 .abio-tag{border:1px solid var(--a-line);background:var(--mo-surface-2,var(--a-soft));padding:4px 8px;color:var(--mo-muted,var(--a-mid));font:10px/1.3 "Liberation Mono",monospace;border-radius:3px;white-space:nowrap}
 .abio-tag.live{background:#e1f5ec;color:#28765b;border-color:#b6dec9}
 .abio-coming{color:var(--mo-muted,var(--a-mid));font-weight:500}
-.abio-lower{padding:60px 0}
+.abio-lower{padding-top:60px;padding-bottom:60px}
 .abio-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
 .abio-info{padding-top:16px;border-top:1px solid var(--mo-border,var(--a-line))}
 .abio-info strong{display:block;font-size:16px;margin:9px 0}
@@ -104,4 +104,12 @@ body.abio{margin:0;min-width:320px;background:var(--mo-bg,var(--a-paper));color:
 @media(max-width:1170px){.abio-header-inner .abio-nav{flex-basis:100%;width:100%}.abio-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:850px){.abio-hero,.abio-experiment{grid-template-columns:minmax(0,1fr)}.abio-hero-graphic{max-width:560px;min-height:280px}.abio-columns{grid-template-columns:1fr 1fr}.abio-tank{min-height:390px}}
 @media(max-width:650px){.abio-card-grid,.abio-columns,.abio-results,.abio-answers{grid-template-columns:minmax(0,1fr)}.abio-hero{padding-top:43px;padding-bottom:50px}.abio-hero h1{font-size:48px}.abio-hero-graphic{min-height:240px}.abio-section{padding:43px 0 56px}.abio-tank{min-height:330px}.abio-tank svg{min-height:330px}.abio-control-panel{padding:20px}}
+
+/* Guardrails: gutters belong to .abio-wrap, even when the same element
+ * also has a section/spacing class. Keep section padding vertical-only. */
+.abio-wrap{min-width:0;max-width:1380px}
+.abio-wrap.abio-lower{padding-left:clamp(18px,4vw,60px);padding-right:clamp(18px,4vw,60px)}
+.abio-columns>*,.abio-section-title>*,.abio-footer-inner>*{min-width:0}
+.abio h1,.abio h2,.abio h3{overflow-wrap:break-word}
+.abio-footer-inner{overflow-wrap:anywhere}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
