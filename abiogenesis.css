@@ -1,0 +1,107 @@
+/* Learning Lab 02 — modern-objectivity stage styles (no runtime dependency) */
+:root{--a-ink:#10272c;--a-deep:#102931;--a-accent:#009e98;--a-paper:#f3f8f6;--a-soft:#edf4f2;--a-line:#cfdfdb;--a-mid:#547079}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body.abio{margin:0;min-width:320px;background:var(--mo-bg,var(--a-paper));color:var(--mo-text,var(--a-ink));font-family:"Liberation Sans",Arial,sans-serif;line-height:1.6}
+.abio h1,.abio h2,.abio h3{color:var(--mo-text-strong,var(--a-ink))}
+.abio a{color:var(--mo-accent,var(--a-accent));text-underline-offset:3px}
+.abio button,.abio input{font:inherit}
+.abio button{cursor:pointer}
+.abio button:focus-visible,.abio a:focus-visible,.abio input:focus-visible{outline:3px solid var(--mo-focus,#009e98);outline-offset:3px}
+.abio-wrap{width:100%;max-width:1380px;min-width:0;padding-left:clamp(18px,4vw,60px);padding-right:clamp(18px,4vw,60px);margin-left:auto;margin-right:auto}
+.abio-header{background:var(--mo-surface,#fff);border-bottom:1px solid var(--mo-border,var(--a-line))}
+.abio-header-inner{display:flex;min-height:77px;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-block:14px}
+.abio-brand{display:flex;gap:12px;align-items:center;color:var(--mo-text-strong,var(--a-ink))!important;text-decoration:none;min-width:0}
+.abio-brand-mark{display:grid;place-items:center;border:1px solid var(--a-accent);border-radius:5px;color:var(--a-accent);width:37px;height:37px;flex:none;font:23px/1 "Liberation Serif",Georgia,serif}
+.abio-brand strong{display:block;line-height:1.1;font-size:15px;letter-spacing:-.02em}
+.abio-brand small{display:block;letter-spacing:.09em;font:10px/1.8 "Liberation Mono",monospace;color:var(--mo-muted,var(--a-mid))}
+.abio-nav{display:flex;align-items:center;flex-wrap:wrap;gap:6px;min-width:0}
+.abio-nav a{padding:9px 11px;font-size:12px;font-weight:700;color:var(--mo-muted,var(--a-mid));border-radius:4px;text-decoration:none;white-space:nowrap}
+.abio-nav a:hover{background:var(--mo-surface-2,var(--a-soft));color:var(--a-ink)}
+.abio-nav a[aria-current=page]{background:var(--mo-accent-light,#dff2ee);color:#007973}
+.abio-nav a.abio-home{border:1px solid var(--mo-border,var(--a-line))}
+.abio-skip{position:absolute;top:-100px;left:15px;z-index:99;background:white;padding:12px;color:#12343a!important}
+.abio-skip:focus{top:10px}
+.abio-eyebrow{font:700 10px/1.5 "Liberation Mono",monospace;letter-spacing:.12em;color:var(--mo-accent,var(--a-accent));text-transform:uppercase}
+.abio-crumb{padding-top:23px;font:11px "Liberation Mono",monospace;color:var(--mo-muted,var(--a-mid))}
+.abio-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,.8fr);gap:clamp(25px,5vw,80px);align-items:center;padding-top:63px;padding-bottom:75px}
+.abio-hero>*,.abio-card-grid>*,.abio-experiment>*,.abio-panel>*,.abio-results>*{min-width:0;max-width:100%}
+.abio-hero h1{font-size:clamp(49px,5.8vw,85px);font-weight:700;line-height:1.04;letter-spacing:-.065em;margin:18px 0 25px}
+.abio-hero h1 em{font:400 1em "Liberation Serif",Georgia,serif;color:var(--a-accent)}
+.abio-lead{font-size:clamp(17px,1.7vw,21px);line-height:1.68;color:var(--mo-muted,var(--a-mid));max-width:760px}
+.abio-hero-note{max-width:680px;font-size:13px;line-height:1.75;color:var(--mo-muted,var(--a-mid));margin-top:20px}
+.abio-actions{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0}
+.abio-link-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;background:var(--a-accent);color:white!important;padding:11px 17px;border-radius:5px;font-size:12px;font-weight:700;border:1px solid var(--a-accent);min-height:42px}
+.abio-link-btn:hover{background:#007f7a}
+.abio-link-btn.secondary{background:transparent;color:var(--mo-text-strong,var(--a-ink))!important;border-color:var(--mo-border-strong,var(--a-line))}
+.abio-link-btn.secondary:hover{background:var(--mo-surface-2,var(--a-soft))}
+.abio-hero-graphic{background:var(--a-deep);border-radius:12px;overflow:hidden;min-height:360px;display:flex;flex-direction:column;color:#b7d8d1;box-shadow:var(--mo-shadow,0 2px 8px #0002)}
+.abio-hero-graphic svg{display:block;width:100%;height:auto;max-height:360px;flex:1}
+.abio-graphic-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:16px 20px;font:10px/1.5 "Liberation Mono",monospace;letter-spacing:.04em;color:#92c5ba}
+.abio-section{padding:62px 0 75px}
+.abio-section.alt{background:var(--mo-surface-2,var(--a-soft));border-top:1px solid var(--mo-border,var(--a-line))}
+.abio-section-title{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:27px}
+.abio-section-title h2{font-size:clamp(30px,3.7vw,48px);line-height:1.13;letter-spacing:-.048em;margin:10px 0 0}
+.abio-section-title p{max-width:390px;font-size:13px;line-height:1.75;color:var(--mo-muted,var(--a-mid));margin:0}
+.abio-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.abio-module{background:var(--mo-surface,#fff);border:1px solid var(--mo-border,var(--a-line));border-radius:var(--mo-radius,7px);overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.abio-module-art{height:132px;background:var(--a-deep);position:relative;display:grid;place-items:center;color:#8dc7b8;overflow:hidden}
+.abio-module-art:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#8caea51b 1px,transparent 1px),linear-gradient(90deg,#8caea51b 1px,transparent 1px);background-size:22px 22px}
+.abio-module-art svg{position:relative;display:block;width:70%;height:115px;max-width:260px}
+.abio-module-body{padding:22px;flex:1}
+.abio-module-body h3{font-size:23px;line-height:1.16;letter-spacing:-.033em;margin:11px 0 14px}
+.abio-module-body p{font-size:13px;line-height:1.74;color:var(--mo-muted,var(--a-mid));margin:0}
+.abio-module-foot{padding:14px 20px;border-top:1px solid var(--mo-border,var(--a-line));display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;font-weight:700}
+.abio-module-foot a{text-decoration:none}
+.abio-tag{border:1px solid var(--a-line);background:var(--mo-surface-2,var(--a-soft));padding:4px 8px;color:var(--mo-muted,var(--a-mid));font:10px/1.3 "Liberation Mono",monospace;border-radius:3px;white-space:nowrap}
+.abio-tag.live{background:#e1f5ec;color:#28765b;border-color:#b6dec9}
+.abio-coming{color:var(--mo-muted,var(--a-mid));font-weight:500}
+.abio-lower{padding:60px 0}
+.abio-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.abio-info{padding-top:16px;border-top:1px solid var(--mo-border,var(--a-line))}
+.abio-info strong{display:block;font-size:16px;margin:9px 0}
+.abio-info p{font-size:13px;line-height:1.8;color:var(--mo-muted,var(--a-mid));max-width:40ch}
+.abio-footer{background:var(--a-deep);color:#bbd5ce;margin-top:24px}
+.abio-footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;padding-block:30px;font:11px/1.8 "Liberation Mono",monospace}
+.abio-footer a{color:#8ee0d1}
+.abio-experiment-head{padding:50px 0 27px}
+.abio-experiment-head h1{font-size:clamp(42px,5vw,67px);line-height:1.08;letter-spacing:-.06em;margin:13px 0 16px}
+.abio-experiment{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:15px;align-items:stretch;margin-top:22px}
+.abio-tank{background:var(--a-deep);border-radius:7px;min-height:450px;position:relative;overflow:hidden}
+.abio-tank:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#8cbdb215 1px,transparent 1px),linear-gradient(90deg,#8cbdb215 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+.abio-tank svg{position:relative;width:100%;height:100%;min-height:400px;display:block}
+.abio-tank-label{position:absolute;top:17px;left:19px;right:19px;z-index:1;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font:10px/1.5 "Liberation Mono",monospace;color:#9acbc1;pointer-events:none}
+.abio-control-panel{padding:clamp(22px,2.7vw,38px);border:1px solid var(--mo-border,var(--a-line));background:var(--mo-surface,#fff);border-radius:7px}
+.abio-control-panel h2{font-size:clamp(26px,2.6vw,35px);letter-spacing:-.035em;margin:10px 0}
+.abio-control-panel p{font-size:13px;color:var(--mo-muted,var(--a-mid));line-height:1.75}
+.abio-control{padding:17px 0;border-top:1px solid var(--mo-border,var(--a-line))}
+.abio-control-head{display:flex;justify-content:space-between;gap:15px;align-items:baseline;margin-bottom:9px}
+.abio-control-head label{font-size:13px;font-weight:700}
+.abio-control-head strong{font:700 16px "Liberation Mono",monospace}
+.abio-control input[type=range]{width:100%;accent-color:var(--a-accent);min-height:30px}
+.abio-control-help{font-size:11px;color:var(--mo-muted,var(--a-mid))}
+.abio-presets{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.abio-presets button,.abio-reset{padding:9px 11px;border:1px solid var(--mo-border-strong,var(--a-line));background:var(--mo-surface,#fff);color:var(--mo-text,var(--a-ink));border-radius:4px;font-size:12px;font-weight:700}
+.abio-presets button:hover,.abio-reset:hover{border-color:var(--a-accent)}
+.abio-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:17px 0}
+.abio-metric{background:var(--mo-surface,#fff);border:1px solid var(--mo-border,var(--a-line));padding:18px 20px;border-radius:5px}
+.abio-metric span{display:block;font:10px/1.65 "Liberation Mono",monospace;color:var(--mo-muted,var(--a-mid))}
+.abio-metric strong{display:block;margin-top:8px;font:700 clamp(18px,2.6vw,29px) "Liberation Mono",monospace;letter-spacing:-.035em;overflow-wrap:anywhere}
+.abio-interpret{border-left:3px solid var(--a-accent);background:var(--mo-surface-2,var(--a-soft));padding:17px 20px;margin:16px 0 28px;font-size:13px;line-height:1.8}
+.abio-interpret strong{display:block;font-size:14px;margin-bottom:5px}
+.abio-question{margin-top:25px;border:1px solid var(--mo-border,var(--a-line));background:var(--mo-surface,#fff);border-radius:6px;padding:24px}
+.abio-question h2{font-size:25px;letter-spacing:-.03em;margin:10px 0}
+.abio-answers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:18px 0}
+.abio-answers button{background:var(--mo-surface,#fff);border:1px solid var(--mo-border-strong,var(--a-line));border-radius:4px;padding:13px;text-align:left;font-size:13px;color:var(--mo-text,var(--a-ink))}
+.abio-answers button:hover:not(:disabled){border-color:var(--a-accent)}
+.abio-answers button.correct{border-color:#2c9770;background:#e0f3e8}
+.abio-answers button.wrong{border-color:#bd7168;background:#f9e8e4}
+.abio-feedback{font-size:13px;line-height:1.75;padding:13px 16px;background:var(--mo-surface-2,var(--a-soft));border-left:3px solid var(--a-accent)}
+.abio-feedback[hidden]{display:none}
+.abio-references{margin:30px 0 7px;padding:17px 0;border-top:1px solid var(--mo-border,var(--a-line));font-size:11px;line-height:1.9;color:var(--mo-muted,var(--a-mid))}
+.abio-references a{font-weight:700}
+.abio-formula{font:18px/1.55 "Liberation Mono",monospace;color:var(--mo-text-strong,var(--a-ink));padding:16px 20px;background:var(--mo-surface-2,var(--a-soft));border:1px solid var(--mo-border,var(--a-line));border-radius:4px}
+@media(max-width:1170px){.abio-header-inner .abio-nav{flex-basis:100%;width:100%}.abio-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){.abio-hero,.abio-experiment{grid-template-columns:minmax(0,1fr)}.abio-hero-graphic{max-width:560px;min-height:280px}.abio-columns{grid-template-columns:1fr 1fr}.abio-tank{min-height:390px}}
+@media(max-width:650px){.abio-card-grid,.abio-columns,.abio-results,.abio-answers{grid-template-columns:minmax(0,1fr)}.abio-hero{padding-top:43px;padding-bottom:50px}.abio-hero h1{font-size:48px}.abio-hero-graphic{min-height:240px}.abio-section{padding:43px 0 56px}.abio-tank{min-height:330px}.abio-tank svg{min-height:330px}.abio-control-panel{padding:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
