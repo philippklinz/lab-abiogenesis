@@ -34,3 +34,5 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Test all lab pages at 12 viewport widths
         run: node tests/layout-check.mjs
+      - name: Test all interactive experiments
+        run: node tests/modules-check.mjs
