@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f3f8f6">
+<meta name="description" content="Interaktives Konzentrationsexperiment: Verändere die Wassermenge und Stoffmenge in einem idealisierten präbiotischen Reaktionsraum.">
+<title>Präbiotische Chemie — Learning Lab 02</title>
+<link rel="stylesheet" href="modern-objectivity.css">
+<link rel="stylesheet" href="abiogenesis.css">
+<script defer src="chemistry-lab.js"></script>
+</head>
+<body class="abio">
+<a href="#main" class="abio-skip">Zum Inhalt springen</a>
+<header class="abio-header"><div class="abio-wrap abio-header-inner">
+<a class="abio-brand" href="index.html"><span class="abio-brand-mark" aria-hidden="true">◌</span><span><strong>ABIOGENESE</strong><small>LEARNING LAB / 02</small></span></a>
+<nav class="abio-nav" aria-label="Labor-Navigation"><a href="index.html">Übersicht</a><a href="01_praebiotische_chemie.html" aria-current="page">Präbiotische Chemie</a><a href="https://philippklinz.github.io/lab-early-earth/">LAB 01 ↗</a><a class="abio-home" href="https://philippklinz.github.io/learning-labs/">Alle Labore ↗</a></nav>
+</div></header>
+<main id="main" class="abio-wrap">
+<div class="abio-crumb"><a href="index.html">LAB 02</a> / UNTERLABOR 01 / KONZENTRATION</div>
+<section class="abio-experiment-head">
+<div class="abio-eyebrow">EXPERIMENT 01 / PRÄBIOTISCHE CHEMIE</div>
+<h1>Warum macht<br>Konzentration einen Unterschied?</h1>
+<p class="abio-lead">In einer verdünnten Lösung sind Moleküle weit voneinander entfernt. Wenn Wasser verschwindet und gelöste Stoffe zurückbleiben, steigt ihre Konzentration. Untersuche den Zusammenhang direkt.</p>
+<p class="abio-hero-note">Dieses Experiment zeigt ein ideales <strong>Massenbilanzmodell</strong>, keine tatsächliche Synthese organischer Moleküle. Wasser ist in der Chemie nicht nur ein Verdünnungsmittel; echte Reaktionen hängen unter anderem von Stoffart, Energie, pH-Wert, Temperatur und Mineraloberflächen ab.</p>
+</section>
+<section aria-labelledby="experiment-title">
+<div class="abio-eyebrow">01 / SELBST EXPERIMENTIEREN</div>
+<div class="abio-experiment">
+<div class="abio-tank" role="img" id="lab-beaker" aria-label="Schematisches Gefäß mit veränderlichem Wasserniveau und Punkten für gelöste Teilchen. Zahlenwerte stehen rechts und unter dem Diagramm.">
+<div class="abio-tank-label"><span>SCHEMATISCH / GEFÄSSMODELL</span><span>KEINE REAKTIONSSIMULATION</span></div>
+<svg viewBox="0 0 640 440" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs>
+  <linearGradient id="fluid-tint" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#328e9a" stop-opacity=".7"/><stop offset="1" stop-color="#1d5562"/></linearGradient>
+  <clipPath id="water-clip"><rect id="water-clip-rect" x="171" y="103" width="298" height="270"/></clipPath>
+</defs>
+<g opacity=".6" stroke="#6c9793" fill="none">
+<path d="M30 370H610M45 55h28M565 55h27M45 400h28M565 400h27" stroke-width="1"/>
+<path d="M79 350h20m-20-45h20m-20-45h20m-20-45h20m-20-45h20m-20-45h20" stroke-width="2"/>
+</g>
+<path d="M159 86V362Q159 378 176 378H464Q480 378 480 362V86" stroke="#b8d8cf" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M158 86H482" stroke="#86bbaf" stroke-width="5" stroke-linecap="round"/>
+<rect id="fluid-body" x="170" y="100" width="300" height="273" fill="url(#fluid-tint)" opacity=".92" rx="3"/>
+<line id="fluid-surface" x1="169" y1="103" x2="471" y2="103" stroke="#9ce0e0" stroke-width="3"/>
+<g id="particle-cloud" clip-path="url(#water-clip)"></g>
+<path d="M499 92V373" stroke="#87c7bd" stroke-dasharray="2 10" stroke-width="1.5"/>
+<path d="M494 102h12M494 170h12M494 239h12M494 308h12M494 373h12" stroke="#87c7bd"/>
+<text x="515" y="107" font-size="10" fill="#9fcfc3" font-family="monospace">100</text>
+<text x="515" y="244" font-size="10" fill="#9fcfc3" font-family="monospace">50</text>
+<text x="515" y="375" font-size="10" fill="#9fcfc3" font-family="monospace">0</text>
+<text x="173" y="410" font-size="11" fill="#b3d7ce" font-family="monospace">TEILCHEN = GELÖSTER STOFF</text>
+</svg>
+</div>
+<div class="abio-control-panel">
+<div class="abio-eyebrow">CHEMIE / IDEALISIERT</div>
+<h2 id="experiment-title">Verändere die Bedingungen.</h2>
+<p>Die Punktzahl steht modellhaft für gelöste Teilchen. Die Skala der Flüssigkeit und die Zahlen sind bewusst in frei gewählten Einheiten angegeben.</p>
+<div class="abio-control">
+<div class="abio-control-head"><label for="water-volume">Wasservolumen</label><strong id="water-value">100 VE</strong></div>
+<input type="range" id="water-volume" min="20" max="100" step="1" value="100" aria-describedby="water-help">
+<div class="abio-control-help" id="water-help">VE = relative Volumeneinheit. Weniger Wasser bei gleicher Stoffmenge → höhere Konzentration.</div>
+</div>
+<div class="abio-control">
+<div class="abio-control-head"><label for="solute-quantity">Gelöste Teilchen</label><strong id="solute-value">60 TE</strong></div>
+<input type="range" id="solute-quantity" min="10" max="120" step="1" value="60" aria-describedby="solute-help">
+<div class="abio-control-help" id="solute-help">TE = relative Teilcheneinheit; für dieses Experiment bleibt jeder Teilchenpunkt gelöst.</div>
+</div>
+<div class="abio-eyebrow" style="margin-top:15px">SCHNELLEXPERIMENTE</div>
+<div class="abio-presets" role="group" aria-label="Beispielbedingungen wählen">
+<button type="button" data-preset="baseline">Ausgangszustand</button>
+<button type="button" data-preset="evaporation">Wasser verdunstet</button>
+<button type="button" data-preset="dilution">Stoff stark verdünnt</button>
+<button type="button" data-preset="more">Mehr Stoff</button>
+</div>
+</div>
+</div>
+<div class="abio-results" aria-label="Berechnete Modellwerte">
+<div class="abio-metric"><span>RELATIVE KONZENTRATION / TE PRO VE</span><strong id="concentration-result" aria-live="polite">0,60</strong></div>
+<div class="abio-metric"><span>VERHÄLTNIS ZUM AUSGANGSZUSTAND</span><strong id="relative-result" aria-live="polite">1,00 ×</strong></div>
+<div class="abio-metric"><span>WASSERVOLUMEN / MODELL</span><strong id="volume-result">100 VE</strong></div>
+</div>
+<div id="experiment-interpretation" class="abio-interpret" role="status" aria-live="polite"><strong>Startpunkt.</strong> 60 relative Teilcheneinheiten verteilen sich auf 100 relative Volumeneinheiten. Verändere das Wasservolumen, um den Effekt zu beobachten.</div>
+</section>
+<section class="abio-question" aria-labelledby="knowledge-question">
+<div class="abio-eyebrow">02 / AKTIVES VERSTEHEN</div>
+<h2 id="knowledge-question">Was passiert bei halber Wassermenge?</h2>
+<p class="abio-hero-note" style="margin:0">Du behältst die gleiche Anzahl gelöster Teilchen, halbierst aber das Volumen. Was folgt für die Konzentration im idealisierten Modell?</p>
+<div class="abio-answers" role="group" aria-label="Lernfrage beantworten">
+<button type="button" data-answer="half">Sie halbiert sich.</button>
+<button type="button" data-answer="double">Sie verdoppelt sich.</button>
+<button type="button" data-answer="same">Sie bleibt gleich.</button>
+</div>
+<div class="abio-feedback" id="learning-feedback" role="status" aria-live="polite" hidden></div>
+<div class="abio-presets"><button type="button" class="abio-reset" id="reset-question">Noch einmal beantworten</button></div>
+</section>
+<section class="abio-section" aria-labelledby="formula-heading">
+<div class="abio-section-title"><div><div class="abio-eyebrow">03 / DEN MECHANISMUS VERSTEHEN</div><h2 id="formula-heading">Die Rechnung dahinter.</h2></div><p>So wenig Mathematik wie möglich – aber genau so viel, dass du das Ergebnis selbst überprüfen kannst.</p></div>
+<div class="abio-formula">c = N / V</div>
+<div class="abio-columns" style="margin-top:23px">
+<div class="abio-info"><span class="abio-eyebrow">N / TEILCHEN</span><strong>Stoffmenge im Modell</strong><p>Die modellierte Zahl gelöster Teilchen bleibt bei reiner Verdunstung unverändert, solange nichts ausgefällt, abgebaut oder entfernt wird.</p></div>
+<div class="abio-info"><span class="abio-eyebrow">V / VOLUMEN</span><strong>Raum für die Lösung</strong><p>Wird die Wassermenge kleiner, steigt bei gleicher Stoffmenge die Konzentration. Wie sehr, sagt das Verhältnis der Volumina.</p></div>
+<div class="abio-info"><span class="abio-eyebrow">c / KONZENTRATION</span><strong>Ein Hinweis, kein Lebensbeweis</strong><p>In manchen chemischen Systemen kann eine erhöhte lokale Konzentration Begegnungen oder Reaktionen begünstigen. Sie garantiert keine Selbstorganisation, Polymerisation oder Lebensentstehung.</p></div>
+</div>
+<div class="abio-interpret" style="margin-top:28px"><strong>Warum ist das für Abiogenese interessant?</strong> Forschende untersuchen unter anderem zeitweilig austrocknende Tümpel, mineralische Oberflächen, Grenzflächen und hydrothermale Umgebungen. Solche Umgebungen könnten Ausgangsstoffe zusammenbringen oder Energie bereitstellen. Ein bestimmter Ursprungsort ist damit nicht bewiesen. Auch Verdunstung kann Stoffe ausfällen oder chemisch zerstören – dieses Einstiegsmodell berücksichtigt das ausdrücklich nicht.</div>
+<div class="abio-references"><strong>Wissenschaftliche Referenzen:</strong>
+<a href="https://astrobiology.nasa.gov/education/alp/how-did-life-first-emerge-on-earth/" target="_blank" rel="noopener noreferrer">NASA · How did life first emerge on Earth?</a> ·
+<a href="https://astrobiology.nasa.gov/education/alp/where-life-got-started/" target="_blank" rel="noopener noreferrer">NASA · Possible environments</a> ·
+<a href="https://doi.org/10.1016/j.tibs.2026.07.002" target="_blank" rel="noopener noreferrer">Vázquez-Salazar (2026) · RNA-centered chemistry and environmental cycling</a>.
+Dieses Experiment verwendet keine experimentellen Messdaten und stellt keine tatsächlichen Reaktionen dar.</div>
+<div class="abio-actions"><a class="abio-link-btn secondary" href="index.html">← Alle Unterlabore</a><a class="abio-link-btn secondary" href="https://philippklinz.github.io/lab-early-earth/04_junge_erde.html">Die junge Erde ↗</a></div>
+</section>
+</main>
+<footer class="abio-footer"><div class="abio-wrap abio-footer-inner"><span>LEARNING LAB 02 · PRÄBIOTISCHE CHEMIE<br>STATIC BY DESIGN · NO ACCOUNTS · NO TRACKING</span><span><a href="https://philippklinz.github.io/modern-objectivity-style/">Modern Objectivity ↗</a> · <a href="https://github.com/philippklinz/lab-abiogenesis">GitHub ↗</a> · <a href="LICENSE">GPL v2.0</a></span></div></footer>
+</body>
+</html>
