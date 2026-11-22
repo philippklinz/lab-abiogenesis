@@ -14,14 +14,14 @@ Die Gegenwart kennt Zellen mit Membranen, Stoffwechsel und Informationsspeicheru
 
 | Nr. | Seite | Arbeitstitel | Interaktion | Status |
 | --- | --- | --- | --- | --- |
-| 01 | `01_praebiotische_chemie.html` | Präbiotische Chemie | Konzentration und Wassermenge im idealisierten Gefäß, Verdünnung, Reaktionsbedingungen, alltagsnahe Erklärungen | V0.1 in Umsetzung |
+| 01 | `01_praebiotische_chemie.html` | Präbiotische Chemie | Konzentration und Wassermenge im idealisierten Gefäß, Verdünnung, Reaktionsbedingungen, alltagsnahe Erklärungen | **V0.1 implementiert** |
 | 02 | `02_bausteine.html` | Bausteine des Lebens | Grundlegende Bindungen und funktionelle Gruppen sowie kleine Reaktionsnetzwerke aus didaktisch vereinfachten Molekülen | Geplant |
 | 03 | `03_protocellen.html` | Membranen und Protocellen | Amphiphile Moleküle, Aggregation, Membranen, Vesikel; Permeabilität und Austausch | Geplant |
 | 04 | `04_rna_information.html` | RNA und Information | Sequenzkopie, Fehlerrate, Ressourcen, Selektionsdruck und Stabilität; klar als Modell gekennzeichnet | Geplant |
 | 05 | `05_hypothesen.html` | Hypothesen vergleichen | RNA-zentrierte Modelle, Stoffwechsel-zuerst, Membranen, hydrothermale Quellen, nass-trocken Zyklen, Eisszenarien; Nachweise/Grenzen | Geplant |
 | 06 | `06_evidenzlabor.html` | Evidenzlabor | Literaturkarten, Originalexperimente, Messung vs. Interpretation, widerlegbare Vorhersagen und ungelöste Fragen | Geplant |
 
-## M1 — ein sauberer Einstieg: das Konzentrationslabor
+## M1 — ein sauberer Einstieg: das Konzentrationslabor (V0.1 implementiert)
 
 Frage: **Warum könnte die lokale Konzentration einfacher Bausteine für präbiotische Reaktionen entscheidend gewesen sein?**
 
@@ -88,3 +88,12 @@ Für jeden Befund:
 - Weitere Originalarbeiten werden für jedes Modul einzeln gesichtet und zitiert, bevor konkrete Mechanismen simuliert werden.
 
 Bei NASA-Material handelt es sich um Referenzlinks; NASA-Bilder oder -Grafiken werden nicht ohne gesonderte Lizenz- und Herkunftsprüfung eingebunden.
+
+
+## Implementierungsstand · 22. November 2026
+
+- Die Hauptseite wurde im Stil von Modern Objectivity neu gestaltet und enthält alle sechs Module; nur Modul 01 ist als interaktiv ausgezeichnet.
+- Modul 01 verfügt über einen unabhängigen Stoffmengen- und Volumenregler, schematische SVG-Darstellung, vier Beispielzustände, Konzentrationsanzeige und Verständnisaufgabe.
+- Dateien: index.html, abiogenesis.css, 01_praebiotische_chemie.html und chemistry-lab.js.
+- Das Konzentrationsmodell ist rein arithmetisch und kein Reaktions- oder Lebensentstehungssimulator.
+- Als nächstes: Modul 02 – molekulare Bausteine und anhand konkreter Literaturquellen geprüfte Chemie.

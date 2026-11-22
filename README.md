@@ -1,50 +1,57 @@
 # Abiogenese — Learning Lab 02
 
-> Wie könnte Leben aus unbelebter Materie entstanden sein?
+> Wo endet Chemie? Wo beginnt Leben?
 
-**Status: Konzept / Grundgerüst.** Interaktive Experimente sind hier noch nicht implementiert. Dieses Repository ist eine eigenständige, öffentlich teilbare Lernumgebung und wird unabhängig von den anderen Learning Labs entwickelt.
+**Status:** Neue Startseite mit sechs Unterlaboren und einem **funktionsfähigen ersten Experiment**. Die weiteren fünf Module sind ausdrücklich geplant.
 
-## Warum dieses Labor?
+**Website:** https://philippklinz.github.io/lab-abiogenesis/
 
-Präbiotische Chemie, Membranen, Stoffwechsel, Selbstorganisation, erste Informationssysteme und Ursprungshypothesen.
+## Unterlabore
 
-### Leitfragen
+| Nr. | Thema | Status |
+| --- | --- | --- |
+| 01 | [Präbiotische Chemie](01_praebiotische_chemie.html) – Konzentration, Verdünnung, Verdunstung | **Interaktiv / V0.1** |
+| 02 | Bausteine und Reaktionen | Geplant |
+| 03 | Membranen und Protocellen | Geplant |
+| 04 | RNA und Information | Geplant |
+| 05 | Ursprungshypothesen | Geplant |
+| 06 | Evidenzlabor | Geplant |
 
-- Welche einfachen chemischen Bausteine gab es?
-- Wie können sich Lipidmembranen und Protocellen bilden?
-- Welche Rolle könnte RNA gespielt haben?
-- Welche Hypothesen lassen sich experimentell prüfen?
+## Erster Prototyp: Konzentration
 
-### Geplante Lernstationen
+Im [Konzentrationslabor](01_praebiotische_chemie.html) lassen sich die Anzahl gelöster Teilchen und das Wasservolumen unabhängig verändern. Das schematische SVG-Gefäß zeigt die Wasserhöhe und die Punktzahl; darunter werden Konzentration und Vergleich zum Ausgangszustand berechnet. Vier Presets und eine aktive Verständnisfrage sind verfügbar.
 
-- Molekül- und Reaktionsmodelle für präbiotische Chemie
-- Protocell- und Membranexperiment
-- Vergleich von RNA-Welt, Stoffwechsel-zuerst und anderen Modellen
+**Idealisierte Gleichung:** c = N / V. N ist die Anzahl relativer Teilcheneinheiten (TE), V die Zahl relativer Volumeneinheiten (VE). Der Startzustand ist N = 60 und V = 100, also c = 0,60 TE/VE. Bei N = 60 und V = 50 ist c = 1,20 TE/VE – die Konzentration hat sich verdoppelt.
 
-## Wissenschaftliche Sorgfalt
+Das Experiment **simuliert keine echten Molekülreaktionen**. Insbesondere bleiben Lösungsmittelwechselwirkungen, Löslichkeitsgrenzen, chemische Reaktionen, Gleichgewichte, Energie- und Stoffflüsse, pH- und Temperaturabhängigkeit unberücksichtigt. Eine Verdunstung kann in Wirklichkeit Ausfällung oder Zersetzung bewirken.
 
-Abiogenese ist kein abschließend geklärter Ablauf. Modelle, Hypothesen, Laborexperimente und gesicherte Beobachtungen sichtbar unterscheiden.
+## Wissenschaftlicher Anspruch
 
-Unser didaktisches Ziel: **beobachten → vermuten → experimentieren → erklären**. Wir trennen Modelle und Vereinfachungen von Messdaten, Belegen und offenen Hypothesen. Ein Einstieg ohne Vorwissen ist ausdrücklich vorgesehen.
+Die tatsächliche historische Entstehung von Leben ist nicht bekannt. Selbstorganisation, Molekülbildung, die Nutzung chemischer Energie sowie die Speicherung und Weitergabe von Information lassen sich getrennt erforschen – es gibt jedoch keine gesicherte Reihenfolge der Entstehung. Eine erfolgreiche Einzelreaktion im Labor ist nicht der Nachweis eines historischen Ursprungswegs.
 
-## Nutzung und Technik
+Jedes Unterlabor trennt beobachtete und gesicherte Vorgänge, idealisierte Modelle, wissenschaftliche Hypothesen und offene Fragen.
 
-Die [Startseite](index.html) ist eine eigenständige HTML-Datei und kann direkt im Browser geöffnet oder über GitHub Pages veröffentlicht werden.
+## Architektur
 
-- Statisches HTML, CSS und JavaScript; bei Bedarf SVG, Canvas oder Three.js.
-- Keine zentrale Plattform, Datenbank, Registrierung oder Build-Pflicht.
-- Alle künftigen Lernstationen sind innerhalb **dieses Repositories** lauffähig.
-- Verweise auf andere Labore sind optional, nicht für die Funktion notwendig.
-- Gestalterische Richtung: **Modern Objectivity** (Arbeitsfassung), Graphit, warmes Off-White, Signal-Türkis `#009E98`.
+- GitHub Pages mit statischem HTML, CSS, JavaScript und eigenen SVG-Illustrationen.
+- Kein Benutzerkonto, kein Backend, keine Telemetrie und keine externen Laufzeitbibliotheken für das erste Experiment.
+- Lokal vendortes, unverändertes [Modern Objectivity Stylesheet](https://philippklinz.github.io/modern-objectivity-style/) aus dem praktischen Kit v0.1.0 (GPL-2.0-only, Quell-Blob c6af71a8688b9001313d19a642e8f308fa463280).
+- Das zusätzliche Layout liegt in der lokalen Datei abiogenesis.css; die Experiment-Logik in chemistry-lab.js.
+- Andere Learning Labs werden nur über Links eingebunden; keine technische Kopplung.
+- Die Funktionen wurden anhand bekannter Beispielwerte und DOM-Interaktionen geprüft; eine vollständige visuelle und assistive Browser-Abnahme steht noch aus.
 
-## Entwicklung
+## Quellen
 
-Siehe [AGENTS.md](AGENTS.md) für Aufgaben, Designgrundsätze, Prüfpunkte und wissenschaftliche Leitplanken.
+- [NASA Astrobiology: How did life first emerge on Earth?](https://astrobiology.nasa.gov/education/alp/how-did-life-first-emerge-on-earth/)
+- [NASA Astrobiology: Where could life have gotten started?](https://astrobiology.nasa.gov/education/alp/where-life-got-started/)
+- [NASA Astrobiology: How did the first cells arise?](https://astrobiology.nasa.gov/education/alp/first-cells-arise/)
+- [Czerniak & Saenz (2025): The secret life of RNA and lipids](https://pubmed.ncbi.nlm.nih.gov/40613519/)
+- [Vázquez-Salazar (2026): Inside the RNA world, 40 years on](https://doi.org/10.1016/j.tibs.2026.07.002)
 
-## Lizenz
+Die neue Illustration und die Berechnung sind didaktische Eigenarbeiten; die obenstehenden Quellen sind wissenschaftliche Referenzen, keine Herkunft experimenteller Messdaten in dieser Website.
 
-[GNU General Public License v2.0](LICENSE) (GPL-2.0-only). Abweichende Lizenzen hinzugefügter Bibliotheken oder fremder Inhalte sind getrennt zu beachten.
+## Entwicklung und Lizenz
 
-## Modern Objectivity style kit
-
-Die Gestaltung nutzt eine **lokale, unveränderte Kopie** des [Modern Objectivity Style Kits v0.1 (Draft)](https://philippklinz.github.io/modern-objectivity-style/) aus [`styles/modern-objectivity.css`](https://github.com/philippklinz/modern-objectivity-style/blob/main/styles/modern-objectivity.css), Quellstand `c6af71a8688b9001313d19a642e8f308fa463280` (GPL-2.0-only). Die eigenständige HTML-Seite definiert ihre spezifische Bühne über die semantischen `--mo-*`-Tokens. Keine externe Runtime oder CDN erforderlich.
+- [Ausbauplan und fachliche Regeln](docs/LAB-02-ROADMAP.md)
+- [Anweisungen für Entwicklungsagenten](AGENTS.md)
+- [GNU General Public License v2.0 only](LICENSE)

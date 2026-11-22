@@ -17,11 +17,14 @@ Präbiotische Chemie, Membranen, Stoffwechsel, Selbstorganisation, erste Informa
 - Welche Rolle könnte RNA gespielt haben?
 - Welche Hypothesen lassen sich experimentell prüfen?
 
-### Candidate interactive exhibits — not yet implemented
+### Working prototype and planned exhibits
 
-- Molekül- und Reaktionsmodelle für präbiotische Chemie
-- Protocell- und Membranexperiment
-- Vergleich von RNA-Welt, Stoffwechsel-zuerst und anderen Modellen
+- Implemented: Module 01 – prebiotic concentration lab, with live quantity/volume controls, SVG illustration, four presets and a recall exercise.
+- Planned: Module 02 – chemical building blocks and specifically sourced reactions.
+- Planned: Module 03 – lipid assemblies and protocells.
+- Planned: Module 04 – RNA copying and heredity.
+- Planned: Module 05 – origin-of-life model comparisons.
+- Planned: Module 06 – evidence, experimental constraints, open questions.
 
 ## Scientific responsibility
 
@@ -71,3 +74,17 @@ Modern Objectivity, as documented in the provisional Apperception Machinery Bran
 ## Modern Objectivity implementation
 
 Use the **locally vendored** `modern-objectivity.css` (the v0.1 draft [practical style kit](https://philippklinz.github.io/modern-objectivity-style/), source SHA `c6af71a8688b9001313d19a642e8f308fa463280`). Preserve the vendor stylesheet as an exact copy; make stage-specific changes in the local page styles and prefer `--mo-*` semantic tokens. This is a reference style, **not a universal visual mandate**. Keep the standalone site functioning with no CDN dependencies. If upgrading the kit, compare behavior and update attribution/version notes.
+
+
+## LAB 02 V0.1 – implementation contracts
+
+- The homepage now has six illustrated module cards. Only Module 01 is interactive; do not create dead links or misrepresent 02–06 as implemented.
+- The first experiment is at 01_praebiotische_chemie.html, driven by chemistry-lab.js and styled with abiogenesis.css. These files are standalone and use no runtime CDN.
+- The experiment models only the ideal mass-balance relationship c=N/V in relative TE/VE units: N ranges from 10 to 120; V ranges from 20 to 100. At baseline N=60 and V=100, c=0.60. Reducing V to 50 while holding N=60 yields c=1.20.
+- The drawn particles only symbolise N model units, and fluid level symbolises V. Neither are true molecular dynamics or spatial distributions.
+- No concentration-dependent chemical reactions, precipitation, hydrolysis, polymerisation, pH, temperature, diffusion, mineral adsorption or actual origin-of-life pathway is simulated.
+- The active question should test that halving V with fixed N doubles c; keep immediate explanatory feedback.
+- Preserve the locally vendored Modern Objectivity style sheet unchanged; stage changes belong in abiogenesis.css, with page gutters intact at laptop and mobile widths.
+- Keep the six-module roadmap in docs/LAB-02-ROADMAP.md aligned with actual features.
+- Scientific distinction: demonstrable chemical mechanisms, candidate early-Earth environments, competing hypotheses, and the unknown historical path cannot be conflated.
+- Do not claim visual browser QA, accessibility compliance, or real chemistry validation unless explicitly tested.
