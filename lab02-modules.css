@@ -96,3 +96,44 @@
 @media(max-width:700px){.lab-cards,.lab-metrics,.lab-compare{grid-template-columns:minmax(0,1fr)}.lab-options{grid-template-columns:minmax(0,1fr)}.lab-intro{padding-top:30px}.lab-intro h1{font-size:44px}.lab-section{padding:20px 0 37px}.lab-case-list{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:450px){.lab-pair-grid,.lab-token-grid{grid-template-columns:minmax(0,1fr)}.lab-art{min-height:245px}.lab-button{flex:1}.lab-equation{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.lab-progress>div{transition:none}}
+
+
+/* M02 / Visual memory aid: four chemical terms in two distinct families. */
+.lab-memory-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:14px;align-items:stretch}
+.lab-memory-layout>*,.lab-memory-nucleic-grid>*,.lab-memory-formula>*{min-width:0}
+.lab-memory-group{min-width:0;display:flex;flex-direction:column}
+.lab-memory-group-heading{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-height:31px;margin:0 0 8px;font:700 10px/1.5 var(--mo-mono);letter-spacing:.08em;color:var(--mo-text)}
+.lab-memory-group-heading small{font:10px/1.5 var(--mo-mono);letter-spacing:0;color:var(--mo-muted);margin-left:auto}
+.lab-memory-group-dot{display:inline-block;width:8px;height:8px;border-radius:2px;flex:none}
+.lab-memory-group-dot.protein-dot{background:#c58b63}
+.lab-memory-group-dot.nucleic-dot{background:#009e98}
+.lab-memory-nucleic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;flex:1}
+.lab-memory-card{min-width:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--mo-border);background:var(--mo-surface);border-radius:6px}
+.lab-memory-protein .lab-memory-card{border-top:3px solid #c58b63}
+.lab-memory-nucleic .lab-memory-card{border-top:3px solid #009e98}
+.lab-memory-art{background:#102931;min-height:142px;display:flex;align-items:center;justify-content:center;padding:8px}
+.lab-memory-art svg{display:block;max-width:100%;width:280px;height:auto;overflow:visible}
+.lab-memory-art text{font-family:"Liberation Sans",Arial,sans-serif}
+.lab-memory-card-body{flex:1;display:flex;flex-direction:column;padding:19px}
+.lab-memory-card-body small{font:700 10px/1.5 var(--mo-mono);color:var(--mo-accent);letter-spacing:.065em}
+.lab-memory-protein .lab-memory-card-body small{color:#96623b}
+.lab-memory-card-body h3{font-size:clamp(20px,1.85vw,25px);letter-spacing:-.04em;margin:9px 0 8px}
+.lab-memory-card-body p{font-size:12px;line-height:1.75;color:var(--mo-muted);margin:0 0 17px}
+.lab-memory-card-foot{margin-top:auto;border-top:1px solid var(--mo-border);padding-top:11px;display:flex;gap:5px;flex-wrap:wrap;align-items:baseline;justify-content:space-between}
+.lab-memory-card-foot span{font:9px/1.4 var(--mo-mono);letter-spacing:.06em;color:var(--mo-muted)}
+.lab-memory-card-foot strong{font-size:11px;line-height:1.4;color:var(--mo-text)}
+.lab-memory-equations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:19px}
+.lab-memory-equation{min-width:0;display:flex;gap:13px;align-items:center;border:1px solid var(--mo-border);background:var(--mo-surface-2);border-radius:5px;padding:15px}
+.lab-memory-step{flex:none;font:700 11px var(--mo-mono);color:var(--mo-accent)}
+.lab-memory-formula{display:flex;flex-wrap:wrap;gap:7px;align-items:center;min-width:0;font-size:12px;line-height:1.55}
+.lab-memory-formula strong{font-size:14px}
+.lab-memory-operator{color:var(--mo-muted);font-weight:700}
+.lab-memory-part{padding:5px 8px;border-radius:3px;font-weight:700}
+.lab-memory-part.part-base{background:#dcefe9;color:#16675f}
+.lab-memory-part.part-sugar{background:#f4e5cf;color:#825b2a}
+.lab-memory-part.part-phosphate{background:#f5dfd8;color:#954d40}
+.lab-memory-hint{font-size:12px;line-height:1.8;color:var(--mo-muted);margin-top:13px;max-width:100ch}
+.lab-memory-hint strong{color:var(--mo-text)}
+@media(max-width:1100px){.lab-memory-layout{grid-template-columns:minmax(0,1fr)}.lab-memory-protein .lab-memory-card{max-width:500px}.lab-memory-group-heading small{margin-left:0}}
+@media(max-width:760px){.lab-memory-nucleic-grid{grid-template-columns:minmax(0,1fr)}.lab-memory-equations{grid-template-columns:minmax(0,1fr)}.lab-memory-protein .lab-memory-card{max-width:none}}
+@media(max-width:390px){.lab-memory-equation{align-items:flex-start}.lab-memory-formula{gap:5px}}

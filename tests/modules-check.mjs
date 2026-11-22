@@ -38,6 +38,11 @@ await check('02_bausteine.html',async page=>{
   await assert(page,()=>document.querySelector('#build-feedback').dataset.ok==='true','Correct components');
   await page.locator('#build-reset').click();
   await assert(page,()=>[...document.querySelectorAll('[data-part]')].every(x=>x.getAttribute('aria-pressed')==='false'),'Component reset');
+  await assert(page,()=>document.querySelectorAll('.lab-memory-card').length===4,'Four mnemonic cards are present');
+  await assert(page,()=>['amino','base','nucleoside','nucleotide'].every(k=>document.querySelector('.lab-memory-card[data-concept="'+k+'"]')),'Four expected definitions');
+  await assert(page,()=>document.querySelectorAll('.lab-memory-art svg').length===4,'Each definition has a diagram');
+  await assert(page,()=>document.querySelectorAll('.lab-memory-equation').length===2,'Two composition mnemonics');
+  await assert(page,()=>document.querySelector('.lab-memory-protein .lab-memory-card').dataset.concept==='amino'&&document.querySelectorAll('.lab-memory-nucleic .lab-memory-card').length===3,'Protein and nucleic acid families are separated');
   await page.locator('[data-molecule="nucleoside"]').click();
   await assert(page,()=>document.querySelector('#molecule-formula').textContent.includes('BASE + RIBOSE'),'Nucleoside distinction');
 });

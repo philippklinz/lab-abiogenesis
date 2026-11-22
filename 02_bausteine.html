@@ -32,10 +32,81 @@
 <button data-part="glycerol" type="button" aria-pressed="false">Glycerin</button><button data-part="amino" type="button" aria-pressed="false">Aminogruppe</button><button data-part="tail" type="button" aria-pressed="false">Fettsäurekette</button></div>
 <button id="build-check" class="lab-button primary" type="button">Zusammensetzung prüfen →</button><button id="build-reset" class="lab-button" type="button">Zurücksetzen</button><div id="build-feedback" class="lab-feedback" role="status" aria-live="polite"></div></div></div>
 <div class="lab-pane"><div class="lab-pane-inner"><div class="abio-eyebrow">WISSEN / CHEMIE</div><h3>Struktur ≠ Synthese</h3><p>Du setzt hier bekannte Molekülbestandteile in einem Schema zusammen. In der Chemie müssen dafür echte Reaktionswege, Aktivierung, Selektivität und geeignete Bedingungen gefunden werden.</p><div class="lab-info"><strong>Ein wichtiges Forschungsergebnis</strong><p>Powner, Gerland und Sutherland (2009) zeigten einen experimentellen Zugang zu aktivierten Pyrimidin-Ribonukleotiden, der die einfache Reihenfolge „freie Base + freie Ribose“ umgeht. Das Experiment ist kein Beweis einer historischen RNA-Welt.</p></div></div></div></div></section>
-<section class="lab-section"><div class="lab-section-head"><div><div class="abio-eyebrow">03 / MERKEN</div><h2>Vier Begriffe auseinanderhalten.</h2></div></div><div class="lab-cards">
-<article class="lab-note-card"><small>BAUSTEIN</small><h3>Aminosäure</h3><p>Bausteinklasse von Peptiden; verschiedene Aminosäuren besitzen unterschiedliche Seitenketten.</p></article>
-<article class="lab-note-card"><small>OHNE PHOSPHAT</small><h3>Nukleosid</h3><p>Nukleobase, die mit einem Zucker verbunden ist. Nicht mit einem Nukleotid verwechseln.</p></article>
-<article class="lab-note-card"><small>MIT PHOSPHAT</small><h3>Nukleotid</h3><p>Nukleosid plus eine oder mehrere Phosphatgruppen. RNA besteht aus verknüpften Ribonukleotid-Einheiten.</p></article></div></section>
+<section class="lab-section lab-memory" aria-labelledby="memory-title">
+<div class="lab-section-head"><div><div class="abio-eyebrow">03 / MERKEN</div><h2 id="memory-title">Vier Begriffe auseinanderhalten.</h2></div><p>Erkenne die Bausteine auf einen Blick: Eine Aminosäure gehört zu den Peptiden. Die anderen drei Begriffe bauen aufeinander auf.</p></div>
+<div class="lab-memory-layout">
+  <div class="lab-memory-group lab-memory-protein">
+    <div class="lab-memory-group-heading"><span class="lab-memory-group-dot protein-dot"></span><span>PROTEINE / PEPTIDE</span><small>Eigene Bausteinfamilie</small></div>
+    <article class="lab-memory-card" data-concept="amino">
+      <div class="lab-memory-art" role="img" aria-label="Allgemeines Schema einer Alpha-Aminosäure: NH2, zentrales CH, variable Seitenkette R und COOH.">
+        <svg viewBox="0 0 280 128" aria-hidden="true" focusable="false">
+          <path d="M79 60H112M167 60H196M142 83V103" stroke="#84cbb9" stroke-width="3" stroke-linecap="round"/>
+          <rect x="16" y="39" width="66" height="42" rx="9" fill="#20535b" stroke="#89d2c4" stroke-width="2"/>
+          <text x="49" y="66" fill="#e4f5ec" text-anchor="middle" font-size="20" font-weight="700">NH₂</text>
+          <rect x="110" y="39" width="58" height="42" rx="9" fill="#3c6865" stroke="#9dd5c5" stroke-width="2"/>
+          <text x="139" y="66" fill="#f0f6e9" text-anchor="middle" font-size="19" font-weight="700">CH</text>
+          <rect x="195" y="39" width="79" height="42" rx="9" fill="#25575e" stroke="#89d2c4" stroke-width="2"/>
+          <text x="234" y="66" fill="#e4f5ec" text-anchor="middle" font-size="19" font-weight="700">COOH</text>
+          <rect x="128" y="102" width="28" height="24" rx="5" fill="#e0ab76"/>
+          <text x="142" y="119" fill="#172c30" text-anchor="middle" font-size="15" font-weight="700">R</text>
+          <text x="142" y="18" text-anchor="middle" fill="#9fcbbf" font-family="monospace" font-size="10">ALLGEMEINES STRUKTURSCHEMA</text>
+        </svg>
+      </div>
+      <div class="lab-memory-card-body"><small>01 / AMINO + CARBOXYL</small><h3>Aminosäure</h3><p>Besitzt eine Amino- und eine Carboxylgruppe. Die Seitenkette <strong>R</strong> unterscheidet verschiedene Aminosäuren.</p><div class="lab-memory-card-foot"><span>BAUSTEIN VON</span><strong>Peptiden / Proteinen</strong></div></div>
+    </article>
+  </div>
+  <div class="lab-memory-group lab-memory-nucleic">
+    <div class="lab-memory-group-heading"><span class="lab-memory-group-dot nucleic-dot"></span><span>RNA / DNA</span><small>Drei verwandte Begriffe – jeweils ein Baustein mehr</small></div>
+    <div class="lab-memory-nucleic-grid">
+      <article class="lab-memory-card" data-concept="base">
+        <div class="lab-memory-art" role="img" aria-label="Symbol einer einzelnen Nukleobase ohne Zucker und ohne Phosphat.">
+          <svg viewBox="0 0 280 128" aria-hidden="true" focusable="false">
+            <path d="M115 33L165 33L191 69L165 105L115 105L89 69Z" fill="#225d63" stroke="#80d1c7" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M121 44H157M178 70L162 91M117 94L102 72" stroke="#b7e4d8" stroke-width="2" stroke-linecap="round"/>
+            <text x="140" y="74" text-anchor="middle" fill="#e8fbf3" font-size="17" font-weight="700">BASE</text>
+            <text x="140" y="19" text-anchor="middle" fill="#a5d3c6" font-family="monospace" font-size="10">OHNE ZUCKER / PHOSPHAT</text>
+          </svg>
+        </div>
+        <div class="lab-memory-card-body"><small>02 / NUR DIE BASE</small><h3>Nukleobase</h3><p>Eine stickstoffhaltige Base, beispielsweise <strong>A, G, C, T oder U</strong>. Noch kein Zucker, kein Phosphat.</p><div class="lab-memory-card-foot"><span>BESTEHT AUS</span><strong>Base</strong></div></div>
+      </article>
+      <article class="lab-memory-card" data-concept="nucleoside">
+        <div class="lab-memory-art" role="img" aria-label="Nukleosid als Nukleobase verbunden mit einem Zucker, ohne Phosphat.">
+          <svg viewBox="0 0 280 128" aria-hidden="true" focusable="false">
+            <path d="M55 47L89 29L122 48L122 85L88 103L55 85Z" fill="#225d63" stroke="#80d1c7" stroke-width="3" stroke-linejoin="round"/>
+            <text x="89" y="71" text-anchor="middle" fill="#eafbf4" font-size="13" font-weight="700">BASE</text>
+            <path d="M123 67H159" stroke="#b6ddca" stroke-width="3"/>
+            <path d="M195 34L234 62L218 106H172L157 62Z" fill="#685b46" stroke="#e1b686" stroke-width="3" stroke-linejoin="round"/>
+            <text x="196" y="75" text-anchor="middle" fill="#fff0d8" font-size="13" font-weight="700">ZUCKER</text>
+            <text x="140" y="17" text-anchor="middle" fill="#a5d3c6" font-family="monospace" font-size="10">BASE + ZUCKER</text>
+          </svg>
+        </div>
+        <div class="lab-memory-card-body"><small>03 / ZUCKER DAZU</small><h3>Nukleosid</h3><p><strong>Nukleobase + Zucker.</strong> Bei RNA ist das Ribose, bei DNA Desoxyribose. Weiterhin kein Phosphat.</p><div class="lab-memory-card-foot"><span>BESTEHT AUS</span><strong>Base + Zucker</strong></div></div>
+      </article>
+      <article class="lab-memory-card" data-concept="nucleotide">
+        <div class="lab-memory-art" role="img" aria-label="Nukleotid als Base verbunden mit einem Zucker und zusätzlich einer Phosphatgruppe.">
+          <svg viewBox="0 0 280 128" aria-hidden="true" focusable="false">
+            <path d="M16 49L44 32L73 49L73 81L44 98L16 81Z" fill="#225d63" stroke="#80d1c7" stroke-width="3"/>
+            <text x="45" y="68" text-anchor="middle" fill="#e9fbf3" font-size="11" font-weight="700">BASE</text>
+            <path d="M74 66H100" stroke="#b6ddca" stroke-width="3"/>
+            <path d="M133 35L165 58L153 101H111L97 58Z" fill="#685b46" stroke="#e1b686" stroke-width="3" stroke-linejoin="round"/>
+            <text x="132" y="72" text-anchor="middle" fill="#fff0d8" font-size="10" font-weight="700">ZUCKER</text>
+            <path d="M166 68H199" stroke="#b6ddca" stroke-width="3"/>
+            <circle cx="232" cy="68" r="31" fill="#814e43" stroke="#e2a087" stroke-width="3"/>
+            <text x="232" y="73" text-anchor="middle" fill="#ffeadf" font-size="12" font-weight="700">PO₄</text>
+            <text x="140" y="17" text-anchor="middle" fill="#a5d3c6" font-family="monospace" font-size="10">BASE + ZUCKER + PHOSPHAT</text>
+          </svg>
+        </div>
+        <div class="lab-memory-card-body"><small>04 / PHOSPHAT DAZU</small><h3>Nukleotid</h3><p><strong>Nukleosid + Phosphatgruppe.</strong> Nukleotide sind die Bausteine von RNA und DNA.</p><div class="lab-memory-card-foot"><span>BESTEHT AUS</span><strong>Base + Zucker + Phosphat</strong></div></div>
+      </article>
+    </div>
+  </div>
+</div>
+<div class="lab-memory-equations" aria-label="Merkhilfen zur Molekülzusammensetzung">
+  <div class="lab-memory-equation"><span class="lab-memory-step">01</span><div class="lab-memory-formula"><span class="lab-memory-part part-base">Nukleobase</span><span class="lab-memory-operator">+</span><span class="lab-memory-part part-sugar">Zucker</span><span class="lab-memory-operator">=</span><strong>Nukleosid</strong></div></div>
+  <div class="lab-memory-equation"><span class="lab-memory-step">02</span><div class="lab-memory-formula"><span class="lab-memory-part part-base">Nukleosid</span><span class="lab-memory-operator">+</span><span class="lab-memory-part part-phosphate">Phosphat</span><span class="lab-memory-operator">=</span><strong>Nukleotid</strong></div></div>
+</div>
+<p class="lab-memory-hint"><strong>Eselsbrücke:</strong> <em>Nukleosid = Base mit Zucker.</em> <em>Nukleotid = Nukleosid mit Phosphat.</em> Aminosäuren gehören dagegen zum Aufbau von Peptiden. Die Diagramme zeigen Zusammensetzungen, <strong>keine chemischen Synthesereaktionen</strong>.</p>
+</section>
 <section class="lab-source" aria-label="Wissenschaftliche Quellen"><strong>Quellen und wissenschaftliche Grenzen:</strong> <a href="https://doi.org/10.1038/nature08013" target="_blank" rel="noopener noreferrer">Powner, Gerland &amp; Sutherland (2009): aktivierte Pyrimidin-Ribonukleotide</a> · <a href="https://www.nature.com/articles/s41467-018-07222-w" target="_blank" rel="noopener noreferrer">Non-canonical nucleosides and chemistry of emergence of life (2018)</a>. Die Molekülzeichnungen sind vereinfachte Strukturschemata und erzeugen keine chemischen Reaktionen.</section>
 <nav class="lab-plain-nav" aria-label="Weiterführende Labore"><a href="index.html">← Alle sechs Unterlabore</a><a href="03_protocellen.html">Nächstes Unterlabor ↗</a><a href="https://philippklinz.github.io/lab-molecular-biology/">LAB 03 · Molekularbiologie ↗</a></nav>
 </main><footer class="abio-footer"><div class="abio-wrap abio-footer-inner"><span>LEARNING LAB 02 · ABIOGENESE<br>STATIC BY DESIGN · NO ACCOUNTS · NO TRACKING</span><span><a href="https://philippklinz.github.io/modern-objectivity-style/">Modern Objectivity ↗</a> · <a href="https://github.com/philippklinz/lab-abiogenesis">GitHub ↗</a> · <a href="LICENSE">GPL v2.0</a></span></div></footer></body></html>
