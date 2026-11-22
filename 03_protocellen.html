@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f3f8f6"><title>Membranen & Protocellen — Learning Lab 02</title>
+<meta name="description" content="Erkunde den Unterschied zwischen freien Amphiphilen, Mizellen und Vesikeln. Untersuche in einem vereinfachten Modell, wie die Durchlässigkeit eines Kompartiments den Stoffaustausch verändert.">
+<link rel="stylesheet" href="modern-objectivity.css"><link rel="stylesheet" href="abiogenesis.css"><link rel="stylesheet" href="lab02-modules.css">
+<script defer src="lab02-modules.js"></script></head>
+<body class="abio" data-sublab="03"><a class="abio-skip" href="#main">Zum Inhalt springen</a>
+<header class="abio-header"><div class="abio-wrap abio-header-inner">
+<a href="index.html" class="abio-brand"><span class="abio-brand-mark" aria-hidden="true">◌</span><span><strong>ABIOGENESE</strong><small>LEARNING LAB / 02</small></span></a>
+<nav class="abio-nav" aria-label="Labor-Navigation">
+<a href="index.html">Übersicht</a><a href="01_praebiotische_chemie.html">01 Konzentration</a>
+<a href="02_bausteine.html">02 Moleküle & Reaktionen</a><a href="03_protocellen.html" aria-current="page">03 Protocellen</a><a href="04_rna_information.html">04 RNA & Vererbung</a><a href="05_hypothesen.html">05 Ursprungshypothesen</a><a href="06_evidenzlabor.html">06 Evidenzlabor</a>
+<a class="abio-home" href="https://philippklinz.github.io/learning-labs/">Alle Labore ↗</a></nav></div></header>
+<main id="main" class="abio-wrap"><div class="abio-crumb"><a href="index.html">LAB 02</a> / UNTERLABOR 03 / KOMPARTIMENTE</div>
+<section class="lab-intro"><div class="abio-eyebrow">UNTERLABOR 03 / Kompartimente</div><h1>Wie entsteht<br>ein Innen und Außen?</h1>
+<p>Erkunde den Unterschied zwischen freien Amphiphilen, Mizellen und Vesikeln. Untersuche in einem vereinfachten Modell, wie die Durchlässigkeit eines Kompartiments den Stoffaustausch verändert.</p><div class="lab-index"><span>DREI STRUKTUREN</span><span>MEMBRANTRANSPORT</span><span>KEINE LEBENDE ZELLE</span></div></section>
+
+<section class="lab-section" aria-labelledby="membrane-title"><div class="lab-section-head"><div><div class="abio-eyebrow">01 / SELBSTORGANISATION</div><h2 id="membrane-title">Eine Grenze zwischen innen und außen.</h2></div><p>Amphiphile Moleküle besitzen einen wasserliebenden und einen wassermeidenden Bereich. Unter geeigneten Bedingungen können sie verschiedene Aggregate bilden.</p></div>
+<div class="lab-buttons" role="group" aria-label="Membranstruktur wählen">
+<button class="lab-button" type="button" data-shape="free" aria-pressed="false">Einzelmoleküle</button>
+<button class="lab-button" type="button" data-shape="micelle" aria-pressed="false">Mizelle</button>
+<button class="lab-button" type="button" data-shape="vesicle" aria-pressed="true">Vesikel</button></div>
+<div class="lab-grid"><div class="lab-art"><div class="lab-art-head"><span>FIG. 003 / MEMBRAN-MODELL</span><span>SCHEMATISCH</span></div>
+<div id="membrane-art" role="img" aria-label="Schematische Anordnung von amphiphilen Molekülen als Vesikel, Mizelle oder einzelne Moleküle."></div>
+<div class="lab-art-foot"><span id="membrane-art-label">VESIKEL / ZWEI GRENZFLÄCHEN</span><span>KEIN LEBEWESEN</span></div></div>
+<div class="lab-pane"><div class="lab-pane-inner"><div class="abio-eyebrow" id="membrane-kind">KOMPARTIMENTIERUNG</div><h3 id="membrane-title-text">Vesikel</h3><p id="membrane-description">Eine geschlossene Membran kann einen wässrigen Innenraum gegenüber der Umgebung abgrenzen.</p><div class="lab-info"><strong>Was ist entscheidend?</strong><p id="membrane-caveat">Eine gezeichnete Vesikelhülle ist keine sich selbst erhaltende oder reproduzierende Zelle.</p></div></div></div></div></section>
+<section class="lab-section" aria-labelledby="permeability-title"><div class="lab-section-head"><div><div class="abio-eyebrow">02 / STOFFAUSTAUSCH</div><h2 id="permeability-title">Wie schnell gleicht sich ein Innenraum an?</h2></div><p>Ein stark vereinfachtes Austauschmodell: außen konstant 100 %, innen anfänglich 0 %. Berechne, wie stark ein hypothetischer Stoff über Modellschritte hinein gelangt.</p></div>
+<div class="lab-grid"><div class="lab-pane"><div class="lab-pane-inner">
+<div class="lab-field"><label for="membrane-permeability">Austausch pro Modellschritt <strong id="permeability-label">20 %</strong></label>
+<input id="membrane-permeability" type="range" min="0" max="100" value="20" step="5"></div>
+<div class="lab-field"><label for="membrane-steps">Vergangene Modellschritte <strong id="membrane-steps-label">5</strong></label>
+<input id="membrane-steps" type="range" min="0" max="12" value="5" step="1"></div>
+<div class="lab-equation">Innen(t) = 100 · [1 − (1 − p)ᵗ]</div>
+<div class="lab-metrics"><div class="lab-metric"><small>INNEN</small><strong id="membrane-inside">67,2 %</strong></div><div class="lab-metric"><small>AUẞEN</small><strong>100 %</strong></div><div class="lab-metric"><small>DIFFERENZ</small><strong id="membrane-diff">32,8 %</strong></div></div>
+</div></div>
+<div class="lab-pane"><div class="lab-pane-inner"><div class="abio-eyebrow">MODELL / NICHT MESSUNG</div><h3>Durchlässigkeit ist kein Ein-/Aus-Schalter.</h3><p>Das Modell zeigt einen exponentiell abnehmenden Konzentrationsunterschied. Es gilt nur für einen idealen Innenraum mit konstantem Außenreservoir und einem frei gewählten Austauschanteil <strong>p</strong> pro Schritt.</p><div class="lab-info"><strong>Das echte Problem</strong><p>Die Durchlässigkeit hängt vom Stoff, Membranmaterial und chemischen Bedingungen ab. Die Reglerwerte entsprechen keiner gemessenen Fettsäuremembran. Damit lässt sich weder Stoffwechsel noch eigenständige Vermehrung beweisen.</p></div><div id="membrane-result" class="lab-feedback" role="status" aria-live="polite"></div></div></div></div></section>
+<section class="lab-section"><div class="lab-section-head"><div><div class="abio-eyebrow">03 / BEOBACHTUNG UND GRENZEN</div><h2>Vesikel sind noch keine Zellen.</h2></div></div><div class="lab-cards">
+<article class="lab-note-card"><small>LABORBEOBACHTUNG</small><h3>Bildung</h3><p>Manche Fettsäuren bilden unter geeigneten Bedingungen Vesikel. pH, Konzentration und Salzgehalt beeinflussen die Stabilität.</p></article>
+<article class="lab-note-card"><small>LABORBEOBACHTUNG</small><h3>Wachstum</h3><p>Fettsäurevesikel können Material aufnehmen und wachsen. Experimente zeigten auch physikalisch unterstützte Teilung – nicht autonomes Zellleben.</p></article>
+<article class="lab-note-card"><small>OFFENE FRAGE</small><h3>Integration</h3><p>Wie konnten Membranen mit Informationskopie, Energieflüssen und stabiler Vererbung zusammenwirken?</p></article></div></section>
+<section class="lab-source" aria-label="Wissenschaftliche Quellen"><strong>Quellen und wissenschaftliche Grenzen:</strong> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC419540/" target="_blank" rel="noopener noreferrer">Chen &amp; Szostak (2004): Fettsäurevesikel und Protonengradienten</a> · <a href="https://doi.org/10.1021/ja900919c" target="_blank" rel="noopener noreferrer">Zhu &amp; Szostak (2009): Wachstum/Teilung von Modellmembranen</a>. Der Austauschregler ist eine frei definierte Lehrgröße, keine experimentell gemessene Rate.</section>
+<nav class="lab-plain-nav" aria-label="Weiterführende Labore"><a href="index.html">← Alle sechs Unterlabore</a><a href="04_rna_information.html">Nächstes Unterlabor ↗</a><a href="https://philippklinz.github.io/lab-molecular-biology/">LAB 03 · Molekularbiologie ↗</a></nav>
+</main><footer class="abio-footer"><div class="abio-wrap abio-footer-inner"><span>LEARNING LAB 02 · ABIOGENESE<br>STATIC BY DESIGN · NO ACCOUNTS · NO TRACKING</span><span><a href="https://philippklinz.github.io/modern-objectivity-style/">Modern Objectivity ↗</a> · <a href="https://github.com/philippklinz/lab-abiogenesis">GitHub ↗</a> · <a href="LICENSE">GPL v2.0</a></span></div></footer></body></html>
