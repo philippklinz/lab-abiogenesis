@@ -1,57 +1,59 @@
-# Abiogenese — Learning Lab 02
+# LAB 02 — Abiogenese
 
-> Wo endet Chemie? Wo beginnt Leben?
-
-**Status:** Neue Startseite mit sechs Unterlaboren und einem **funktionsfähigen ersten Experiment**. Die weiteren fünf Module sind ausdrücklich geplant.
+**Sechs eigenständige, interaktive Lernlabore** zur präbiotischen Chemie, Molekülstruktur, Kompartimentierung, RNA, Forschungsmodellen und wissenschaftlicher Evidenz.
 
 **Website:** https://philippklinz.github.io/lab-abiogenesis/
 
+Die Entstehung des Lebens ist wissenschaftlich nicht vollständig geklärt. Das Labor demonstriert gesicherte *Teilmechanismen*, hypothetische Zusammenhänge und ihre Grenzen — es stellt **keine historische Rekonstruktion** der Entstehung des Lebens dar.
+
 ## Unterlabore
 
-| Nr. | Thema | Status |
-| --- | --- | --- |
-| 01 | [Präbiotische Chemie](01_praebiotische_chemie.html) – Konzentration, Verdünnung, Verdunstung | **Interaktiv / V0.1** |
-| 02 | Bausteine und Reaktionen | Geplant |
-| 03 | Membranen und Protocellen | Geplant |
-| 04 | RNA und Information | Geplant |
-| 05 | Ursprungshypothesen | Geplant |
-| 06 | Evidenzlabor | Geplant |
+| Nr. | Unterlabor | Interaktives Experiment | Einschränkung |
+| --- | --- | --- | --- |
+| 01 | [Präbiotische Chemie](01_praebiotische_chemie.html) | Konzentration und Wasservolumen verändern, Verdünnung verstehen, Verständnisfrage | Ideale Stoffmengenbilanz `c=N/V`, kein Reaktionsmodell |
+| 02 | [Moleküle & Reaktionen](02_bausteine.html) | Vier Molekülklassen als schematische Strukturen untersuchen; Nukleotid-Bestandteile auswählen | Struktur- und Zuordnungsübung, keine Synthese |
+| 03 | [Protocellen](03_protocellen.html) | Amphiphile, Mizellen und Vesikel vergleichen; Stoffaustausch über Modellschritte regulieren | `C_in=100(1-(1-p)^t)` ist ein frei gewähltes Austauschmodell, keine gemessene Permeabilität |
+| 04 | [RNA & Information](04_rna_information.html) | RNA-Vorlage eingeben, komplementäre Basen sehen, Fehlerquote wählen, 100 Modellkopien vergleichen | Unabhängige Zufallsfehler, keine chemische RNA-Replikation |
+| 05 | [Ursprungshypothesen](05_hypothesen.html) | Vier Ansätze nebeneinander vergleichen, vier geologische Umgebungen untersuchen | Kein Ranking oder Nachweis eines Ursprungsorts |
+| 06 | [Evidenzlabor](06_evidenzlabor.html) | Sechs Originalexperimente, jeweils drei Behauptungen, Feedback und Quellen | Unterrichtsaufgaben, keine Reproduktion von Labormessungen |
 
-## Erster Prototyp: Konzentration
+Alle Unterlabore sind über die Startseite und die Navigation erreichbar. Die Module sind unabhängig voneinander und **keine gesicherte evolutionäre Reihenfolge**.
 
-Im [Konzentrationslabor](01_praebiotische_chemie.html) lassen sich die Anzahl gelöster Teilchen und das Wasservolumen unabhängig verändern. Das schematische SVG-Gefäß zeigt die Wasserhöhe und die Punktzahl; darunter werden Konzentration und Vergleich zum Ausgangszustand berechnet. Vier Presets und eine aktive Verständnisfrage sind verfügbar.
+## Forschungsansatz
 
-**Idealisierte Gleichung:** c = N / V. N ist die Anzahl relativer Teilcheneinheiten (TE), V die Zahl relativer Volumeneinheiten (VE). Der Startzustand ist N = 60 und V = 100, also c = 0,60 TE/VE. Bei N = 60 und V = 50 ist c = 1,20 TE/VE – die Konzentration hat sich verdoppelt.
+Das Projekt trennt bei jeder Fragestellung:
 
-Das Experiment **simuliert keine echten Molekülreaktionen**. Insbesondere bleiben Lösungsmittelwechselwirkungen, Löslichkeitsgrenzen, chemische Reaktionen, Gleichgewichte, Energie- und Stoffflüsse, pH- und Temperaturabhängigkeit unberücksichtigt. Eine Verdunstung kann in Wirklichkeit Ausfällung oder Zersetzung bewirken.
+1. **Beobachtung:** Welche experimentellen oder geologischen Befunde existieren?
+2. **Lehrmodell:** Welche vereinfachte Beziehung kann man damit erkunden?
+3. **Deutung:** Welche Hypothesen werden dadurch gestützt?
+4. **Grenzen:** Welche Behauptungen bleiben unbelegt?
 
-## Wissenschaftlicher Anspruch
+Die Molekül-Bausteine (02) sind keine realen Reaktionswege. Die Protocellen-Skizzen (03) bilden keine tatsächliche Membranstabilität in Abhängigkeit von pH oder Salz ab. Die RNA-Kopien (04) nutzen festgelegte Basenpaarung und eine didaktisch konstruierte Fehlerwahrscheinlichkeit. Im Hypothesenlabor (05) werden chemische Mechanismen **von Umwelten getrennt**: beispielsweise können RNA-zentrierte Modelle und hydrothermale Umgebungen nicht einfach gegeneinander bewertet werden. Das Evidenzlabor (06) übt die Prüfung publizierter Aussagen ohne Überdehnung ihrer Schlussfolgerungen.
 
-Die tatsächliche historische Entstehung von Leben ist nicht bekannt. Selbstorganisation, Molekülbildung, die Nutzung chemischer Energie sowie die Speicherung und Weitergabe von Information lassen sich getrennt erforschen – es gibt jedoch keine gesicherte Reihenfolge der Entstehung. Eine erfolgreiche Einzelreaktion im Labor ist nicht der Nachweis eines historischen Ursprungswegs.
+## Wissenschaftliche Primärquellen
 
-Jedes Unterlabor trennt beobachtete und gesicherte Vorgänge, idealisierte Modelle, wissenschaftliche Hypothesen und offene Fragen.
+- Miller, 1953, *A Production of Amino Acids Under Possible Primitive Earth Conditions*, https://doi.org/10.1126/science.117.3046.528
+- Chen & Szostak, 2004, *Membrane growth can generate a transmembrane pH gradient in fatty acid vesicles*, https://doi.org/10.1073/pnas.0308045101
+- Zhu & Szostak, 2009, *Coupled Growth and Division of Model Protocell Membranes*, https://doi.org/10.1021/ja900919c
+- Powner, Gerland & Sutherland, 2009, *Synthesis of activated pyrimidine ribonucleotides in prebiotically plausible conditions*, https://doi.org/10.1038/nature08013
+- Becker et al., 2018, *Wet-dry cycles enable the parallel origin of canonical and non-canonical nucleosides by continuous synthesis*, https://doi.org/10.1038/s41467-017-02639-1
+- *Overcoming nucleotide bias in the nonenzymatic copying of RNA templates*, Nucleic Acids Research (2024), https://doi.org/10.1093/nar/gkae982
 
-## Architektur
+Weiterführende Übersichten: https://pmc.ncbi.nlm.nih.gov/articles/PMC7281141/ und https://pmc.ncbi.nlm.nih.gov/articles/PMC7133448/. Die einzelnen Unterlabore verlinken ihre jeweiligen Quellen.
 
-- GitHub Pages mit statischem HTML, CSS, JavaScript und eigenen SVG-Illustrationen.
-- Kein Benutzerkonto, kein Backend, keine Telemetrie und keine externen Laufzeitbibliotheken für das erste Experiment.
-- Lokal vendortes, unverändertes [Modern Objectivity Stylesheet](https://philippklinz.github.io/modern-objectivity-style/) aus dem praktischen Kit v0.1.0 (GPL-2.0-only, Quell-Blob c6af71a8688b9001313d19a642e8f308fa463280).
-- Das zusätzliche Layout liegt in der lokalen Datei abiogenesis.css; die Experiment-Logik in chemistry-lab.js.
-- Andere Learning Labs werden nur über Links eingebunden; keine technische Kopplung.
-- Die Funktionen wurden anhand bekannter Beispielwerte und DOM-Interaktionen geprüft; eine vollständige visuelle und assistive Browser-Abnahme steht noch aus.
+## Architektur und Qualitätssicherung
 
-## Quellen
+- GitHub Pages, **statisch**, HTML/CSS/JavaScript, lokal geschriebenes SVG; keine Konten, Telemetrie oder externen JS-Runtimes.
+- `modern-objectivity.css`: unverändertes vendortes Modern-Objectivity-Referenz-Stylesheet.
+- `abiogenesis.css`: Grundbühne; `lab02-modules.css`: Layout aller Module 02–06.
+- `chemistry-lab.js`: Einstiegsmodul; `lab02-modules.js`: fünf unabhängige Modellinteraktionen, aktiviert anhand von `body[data-sublab]`.
+- Automatische Browser-QA: `tests/layout-check.mjs` prüft alle HTML-Seiten bei 12 Viewport-Größen (320–1600 px), `tests/modules-check.mjs` testet die Interaktionen in Chromium. Workflow: [Responsive layout checks](https://github.com/philippklinz/lab-abiogenesis/actions/workflows/layout-check.yml).
+- Kein Build-Schritt für Besucher. Tests installieren Playwright ausschließlich in GitHub Actions. Reales Experten-Review der Wissenschaftsvermittlung und assistive manuelle Tests bleiben wünschenswert.
 
-- [NASA Astrobiology: How did life first emerge on Earth?](https://astrobiology.nasa.gov/education/alp/how-did-life-first-emerge-on-earth/)
-- [NASA Astrobiology: Where could life have gotten started?](https://astrobiology.nasa.gov/education/alp/where-life-got-started/)
-- [NASA Astrobiology: How did the first cells arise?](https://astrobiology.nasa.gov/education/alp/first-cells-arise/)
-- [Czerniak & Saenz (2025): The secret life of RNA and lipids](https://pubmed.ncbi.nlm.nih.gov/40613519/)
-- [Vázquez-Salazar (2026): Inside the RNA world, 40 years on](https://doi.org/10.1016/j.tibs.2026.07.002)
+## Weitere Dokumentation
 
-Die neue Illustration und die Berechnung sind didaktische Eigenarbeiten; die obenstehenden Quellen sind wissenschaftliche Referenzen, keine Herkunft experimenteller Messdaten in dieser Website.
+- [LAB-02-Roadmap](docs/LAB-02-ROADMAP.md) — Konzepte, bereits implementierter Umfang, Forschungslücken.
+- [AGENTS.md](AGENTS.md) — wissenschaftliche, architektonische und technische Entwicklungsregeln.
+- [GNU GPL v2.0 only](LICENSE) — Lizenz des eigenen Projekts; fremde Forschungsarbeiten werden ausschließlich verlinkt.
 
-## Entwicklung und Lizenz
-
-- [Ausbauplan und fachliche Regeln](docs/LAB-02-ROADMAP.md)
-- [Anweisungen für Entwicklungsagenten](AGENTS.md)
-- [GNU General Public License v2.0 only](LICENSE)
+**Nachbarlabore:** [LAB 01 – Die frühe Erde](https://philippklinz.github.io/lab-early-earth/) · [LAB 03 – Molekularbiologie](https://philippklinz.github.io/lab-molecular-biology/).

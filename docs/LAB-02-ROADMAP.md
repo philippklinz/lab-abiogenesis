@@ -15,11 +15,11 @@ Die Gegenwart kennt Zellen mit Membranen, Stoffwechsel und Informationsspeicheru
 | Nr. | Seite | Arbeitstitel | Interaktion | Status |
 | --- | --- | --- | --- | --- |
 | 01 | `01_praebiotische_chemie.html` | Präbiotische Chemie | Konzentration und Wassermenge im idealisierten Gefäß, Verdünnung, Reaktionsbedingungen, alltagsnahe Erklärungen | **V0.1 implementiert** |
-| 02 | `02_bausteine.html` | Bausteine des Lebens | Grundlegende Bindungen und funktionelle Gruppen sowie kleine Reaktionsnetzwerke aus didaktisch vereinfachten Molekülen | Geplant |
-| 03 | `03_protocellen.html` | Membranen und Protocellen | Amphiphile Moleküle, Aggregation, Membranen, Vesikel; Permeabilität und Austausch | Geplant |
-| 04 | `04_rna_information.html` | RNA und Information | Sequenzkopie, Fehlerrate, Ressourcen, Selektionsdruck und Stabilität; klar als Modell gekennzeichnet | Geplant |
-| 05 | `05_hypothesen.html` | Hypothesen vergleichen | RNA-zentrierte Modelle, Stoffwechsel-zuerst, Membranen, hydrothermale Quellen, nass-trocken Zyklen, Eisszenarien; Nachweise/Grenzen | Geplant |
-| 06 | `06_evidenzlabor.html` | Evidenzlabor | Literaturkarten, Originalexperimente, Messung vs. Interpretation, widerlegbare Vorhersagen und ungelöste Fragen | Geplant |
+| 02 | `02_bausteine.html` | Bausteine des Lebens | Grundlegende Bindungen und funktionelle Gruppen sowie kleine Reaktionsnetzwerke aus didaktisch vereinfachten Molekülen | **V0.1 interaktiv implementiert** |
+| 03 | `03_protocellen.html` | Membranen und Protocellen | Amphiphile Moleküle, Aggregation, Membranen, Vesikel; Permeabilität und Austausch | **V0.1 interaktiv implementiert** |
+| 04 | `04_rna_information.html` | RNA und Information | Sequenzkopie, Fehlerrate, Ressourcen, Selektionsdruck und Stabilität; klar als Modell gekennzeichnet | **V0.1 interaktiv implementiert** |
+| 05 | `05_hypothesen.html` | Hypothesen vergleichen | RNA-zentrierte Modelle, Stoffwechsel-zuerst, Membranen, hydrothermale Quellen, nass-trocken Zyklen, Eisszenarien; Nachweise/Grenzen | **V0.1 interaktiv implementiert** |
+| 06 | `06_evidenzlabor.html` | Evidenzlabor | Literaturkarten, Originalexperimente, Messung vs. Interpretation, widerlegbare Vorhersagen und ungelöste Fragen | **V0.1 interaktiv implementiert** |
 
 ## M1 — ein sauberer Einstieg: das Konzentrationslabor (V0.1 implementiert)
 
@@ -92,8 +92,22 @@ Bei NASA-Material handelt es sich um Referenzlinks; NASA-Bilder oder -Grafiken w
 
 ## Implementierungsstand · 22. November 2026
 
-- Die Hauptseite wurde im Stil von Modern Objectivity neu gestaltet und enthält alle sechs Module; nur Modul 01 ist als interaktiv ausgezeichnet.
+- Die Hauptseite wurde im Stil von Modern Objectivity neu gestaltet und enthält alle sechs Module; alle sechs Module sind interaktiv ausgezeichnet.
 - Modul 01 verfügt über einen unabhängigen Stoffmengen- und Volumenregler, schematische SVG-Darstellung, vier Beispielzustände, Konzentrationsanzeige und Verständnisaufgabe.
 - Dateien: index.html, abiogenesis.css, 01_praebiotische_chemie.html und chemistry-lab.js.
 - Das Konzentrationsmodell ist rein arithmetisch und kein Reaktions- oder Lebensentstehungssimulator.
-- Als nächstes: Modul 02 – molekulare Bausteine und anhand konkreter Literaturquellen geprüfte Chemie.
+- Module 02–06 sind als V0.1 ergänzt. Vertiefungen: echte Reaktionsnetze, chemisch kalibrierte Membranparameter, RNA-Replikationskinetik und wissenschaftliche Fachprüfung.
+
+## Implementierungsstand: sechs Unterlabore (V0.1)
+
+- **02:** Unterschied zwischen Glycin, Fettsäure, Ribonukleosid und Ribonukleotid interaktiv untersuchen; drei Nukleotid-Bestandteile auswählen. Es werden keine chemischen Bindungen tatsächlich berechnet.
+- **03:** amphiphile Moleküle, Mizellen und Vesikel grafisch vergleichen; vereinfachtes Austauschmodell mit frei gesetztem p pro Schritt. Keine Vorhersage einer konkreten Membranstabilität.
+- **04:** RNA-Sequenz 1–28 Basen; komplementäre Gegenpositionen; 100 Zufallskopien mit einstellbarer Fehlerrate; Vergleich von Stichprobe und analytischer Wahrscheinlichkeit. Kein enzymatischer oder präbiotischer Replikationsmechanismus.
+- **05:** vier Forschungsansätze und vier geologische Umwelten auf getrennten Achsen; Voraussetzungen und Grenzen ohne numerische Erfolgsbewertung.
+- **06:** sechs auf Primärquellen beruhende Multiple-Choice-Aufgaben zu Miller (1953), Chen/Szostak (2004), Zhu/Szostak (2009), Powner/Sutherland (2009), Becker/Carell (2018) und nichtenzymatischer RNA-Kopie (2024). Feedback und verlinkte Originalarbeiten.
+- Gemeinsame statische Laufzeit in `lab02-modules.js`, Gestaltung in `lab02-modules.css`. Alle Seiten in der Navigation.
+- Technische Abnahme durch GitHub Actions mit zwei Chromium-Suites (Layout und Interaktion); **wissenschaftliche Expertenbegutachtung und umfangreiche visuelle Bedienbarkeitsprüfung bleiben weitere Qualitätsziele**.
+
+## Vertiefungsrichtungen
+
+Die V0.1-Fassung liefert erste **interaktive Lernmodelle**, keine molekulardynamischen oder chemisch validierten Simulationen. Folgende Weiterentwicklungen sind sinnvoll, sofern belastbare Daten und benannte Literaturquellen vorliegen: tatsächliche Reaktionskinetik ausgewählter Systeme, Flüssigphasen- und Membranparameter, Quellenvergleich experimenteller Synthesen, kontrollierte RNA-Reaktionsmodelle und erweiterte Evidenzdatenbank.

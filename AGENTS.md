@@ -17,14 +17,16 @@ Präbiotische Chemie, Membranen, Stoffwechsel, Selbstorganisation, erste Informa
 - Welche Rolle könnte RNA gespielt haben?
 - Welche Hypothesen lassen sich experimentell prüfen?
 
-### Working prototype and planned exhibits
+### Six implemented interactive modules
 
-- Implemented: Module 01 – prebiotic concentration lab, with live quantity/volume controls, SVG illustration, four presets and a recall exercise.
-- Planned: Module 02 – chemical building blocks and specifically sourced reactions.
-- Planned: Module 03 – lipid assemblies and protocells.
-- Planned: Module 04 – RNA copying and heredity.
-- Planned: Module 05 – origin-of-life model comparisons.
-- Planned: Module 06 – evidence, experimental constraints, open questions.
+- **01: `01_praebiotische_chemie.html`** — ideal relative concentration model `c=N/V`.
+- **02: `02_bausteine.html`** — amino-acid/ribonucleotide/fatty-acid/nucleoside structure viewer and component challenge.
+- **03: `03_protocellen.html`** — amphiphile, micelle and vesicle symbolic geometry; ideal exchange `C_in=100(1-(1-p)^t)`.
+- **04: `04_rna_information.html`** — A/U/G/C base pairing; random independent per-position errors over 100 toy trials; perfect-copy probability `(1-p)^L`.
+- **05: `05_hypothesen.html`** — comparative research frames vs independent geological environments; **never rank hypotheses by an invented score**.
+- **06: `06_evidenzlabor.html`** — six primary-paper cases and active exercise distinguishing observation from unsupported claims.
+
+All five modules 02–06 use `lab02-modules.js` and `lab02-modules.css`. No third-party runtime code.
 
 ## Scientific responsibility
 
@@ -78,7 +80,7 @@ Use the **locally vendored** `modern-objectivity.css` (the v0.1 draft [practical
 
 ## LAB 02 V0.1 – implementation contracts
 
-- The homepage now has six illustrated module cards. Only Module 01 is interactive; do not create dead links or misrepresent 02–06 as implemented.
+- The homepage has six interactive cards. Keep all six correct and linked, and retain a single active navigation item per page.
 - The first experiment is at 01_praebiotische_chemie.html, driven by chemistry-lab.js and styled with abiogenesis.css. These files are standalone and use no runtime CDN.
 - The experiment models only the ideal mass-balance relationship c=N/V in relative TE/VE units: N ranges from 10 to 120; V ranges from 20 to 100. At baseline N=60 and V=100, c=0.60. Reducing V to 50 while holding N=60 yields c=1.20.
 - The drawn particles only symbolise N model units, and fluid level symbolises V. Neither are true molecular dynamics or spatial distributions.
@@ -96,3 +98,13 @@ Use the **locally vendored** `modern-objectivity.css` (the v0.1 draft [practical
 - Automated test: `tests/layout-check.mjs`, run via `.github/workflows/layout-check.yml` on HTML/CSS changes. It checks **all standalone lab HTML pages** in Chromium at 320–1600 px, validates no document-level horizontal scrolling, and asserts that `.abio-wrap.abio-lower` retains at least 18 px left and right gutters.
 - If installing test dependencies locally, use `npm install --no-save playwright@1.56.1`, `npx playwright install chromium`, then `node tests/layout-check.mjs`. No build dependencies belong to the site's actual runtime.
 - Add newly created HTML lab pages to this automatically discovered check by following the convention `NN_name.html`.
+
+## Scientific and functional model contracts (Modules 02–06)
+
+- The four molecule images are **schematic molecular fragments**, not geometry-accurate structures or actual reactions. A nucleotide is base + ribose + phosphate; a nucleoside lacks covalently linked phosphate; glycine has amino and carboxyl groups.
+- In the protocell module, micelles do not contain a vesicle-like aqueous lumen. The manually selected shapes are teaching diagrams, not chemical self-assembly predictions. The parameter `p` is not measured permeability; `C_in=100(1-(1-p)^t)` assumes an unlimited constant exterior, an initially empty interior and independent discrete steps. Check p=0, p=1, t=0.
+- The RNA module computes a **positionwise complementary sequence**, not a reverse-oriented 5′→3′ display. Pair A-U and C-G. A copying error is always substituted with a *different* base. `P(perfect)=(1-p)^L`; p=0 must result in 100 perfect copies. It does NOT model nucleotide activation, templated strand extension, separation or full replication.
+- Models 05 are research emphases; environments (pond, vent, ice, mineral) are a *separate axis*, never a winner/loser ranking. Phrasing must avoid historical certainty.
+- Evidence 06 maintains six primary reference URLs; each challenge has **exactly one** answer supported by the actual experimental finding. Avoid conflating vesicle growth with cellular life or copying progress with autonomous genome replication.
+- All data and interactions are ephemeral: no analytics, user accounts, localStorage or API calls.
+- All new pages must pass both `tests/layout-check.mjs` and `tests/modules-check.mjs` in Chromium. Do not claim broad scientific validation based on UI test success. Use explicit evidence links and model caveats in the interface.
